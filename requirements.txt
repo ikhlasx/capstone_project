@@ -1,0 +1,33 @@
+# CloudServe Support Triage — pinned runtime + test dependencies.
+# Target interpreter: Python 3.11 (verified on 3.11.7, Windows x64).
+# Verified 2026-11-08: installed into a fresh empty venv from this file alone,
+# `pip check` clean, every top-level import succeeds. See docs/setup-notes.md.
+#
+# Deliberate deviation from the course pack's list: langchain / langchain-openai are
+# dropped. The pack pinned langchain-openai 0.0.7 alongside openai 1.0.0, which conflict,
+# and the design does not need an orchestration framework — the LLM is called directly
+# through the OpenAI-compatible client pointed at OpenRouter.
+
+# Data model / config
+pydantic==2.14.3
+python-dotenv==1.2.4
+
+# LLM client (OpenAI-compatible; used against OpenRouter)
+openai==3.46.0
+httpx==0.28.1
+
+# Retrieval + local classifier
+chromadb==1.5.9
+sentence-transformers==6.2.0
+transformers==5.22.2
+torch==2.15.0
+scikit-learn==1.9.1
+numpy==2.4.6
+
+# Serving + observability
+fastapi==0.162.2
+uvicorn==0.54.0
+prometheus_client==0.26.0
+
+# Tests
+pytest==9.2.0
