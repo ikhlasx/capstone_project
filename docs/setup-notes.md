@@ -35,5 +35,9 @@ cp .env.example .env            # then put your OpenRouter key in .env
 python -m scripts.smoke_llm
 ```
 
+Verified 2026-11-09: `meta-llama/llama-3.1-8b-instruct` through OpenRouter replied in 1.96 s.
+The `.env` file must sit in the project root (`capstone/.env`), because that is where
+`src/config.py` looks for it.
+
 Exit code 0 means the call succeeded. 2 means no key is configured, and 1 means the call
 failed. The script never prints the key.
