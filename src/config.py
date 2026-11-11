@@ -39,6 +39,7 @@ class Settings:
     log_level: str
     confidence_threshold: float
     retrieval_top_k: int
+    relevance_threshold: float
 
     @property
     def has_api_key(self) -> bool:
@@ -56,4 +57,7 @@ def get_settings() -> Settings:
         log_level=os.getenv("LOG_LEVEL", "INFO"),
         confidence_threshold=_float("CONFIDENCE_THRESHOLD", 0.80),
         retrieval_top_k=_int("RETRIEVAL_TOP_K", 5),
+        # Provisional: picked from the development-set sweep (evaluation/retrieval_sweep.py).
+        # The final value is the student's decision and must be recorded in the PRD.
+        relevance_threshold=_float("RELEVANCE_THRESHOLD", 0.40),
     )
