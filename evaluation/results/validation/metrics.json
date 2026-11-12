@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "label": "validation",
+    "input": "data/validation_tickets.json",
+    "run_id": "0f785d3859aa",
+    "started_at": "2026-11-12T04:17:19+00:00",
+    "wall_seconds": 238.7,
+    "confidence_threshold": 0.8,
+    "relevance_threshold": 0.4,
+    "provider": "openrouter",
+    "model": "meta-llama/llama-3.1-8b-instruct"
+  },
+  "volume": {
+    "processed": 80,
+    "ingest_errors": 0,
+    "auto_answered": 62,
+    "escalated": 18,
+    "blocked_by_guardrails": 2,
+    "generation_failed": 0,
+    "stage_errors": 0,
+    "rules": {
+      "answerable": 62,
+      "protected_intent": 14,
+      "no_relevant_passage": 2,
+      "guardrail_block": 2
+    }
+  },
+  "business": {
+    "first_contact_resolution": 77.5,
+    "escalation_rate": 22.5,
+    "system_response_seconds": {
+      "mean": 2.98,
+      "median": 0.88
+    },
+    "history_baseline": {
+      "tickets_with_history": 80,
+      "first_contact_resolution": 46.2,
+      "escalation_rate": 53.8,
+      "median_resolution_minutes": 218.0
+    }
+  },
+  "technical": {
+    "latency_ms": {
+      "triage_p50": 45.7,
+      "triage_p95": 57.2,
+      "total_p50": 884.3,
+      "total_p95": 10954.2
+    },
+    "cached_generations": 6,
+    "intent_accuracy": 100.0,
+    "intent_macro_precision": 100.0,
+    "intent_per_class": {
+      "account_access": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 4
+      },
+      "api_key_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 6
+      },
+      "api_usage_question": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 4
+      },
+      "authentication_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      },
+      "billing_query": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 10
+      },
+      "compliance_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 1
+      },
+      "configuration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      },
+      "data_export": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 1
+      },
+      "data_residency": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 6
+      },
+      "database_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 1
+      },
+      "deployment_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 5
+      },
+      "feature_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      },
+      "integration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      },
+      "onboarding": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 4
+      },
+      "performance_degradation": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      },
+      "quota_or_overage": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 2
+      },
+      "rate_limit": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 1
+      },
+      "rollback_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 6
+      },
+      "security_incident": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 4
+      },
+      "sso_configuration": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 1
+      },
+      "unclear_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 6
+      },
+      "webhook_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 3
+      }
+    },
+    "urgency_accuracy": 43.8,
+    "urgency_per_class": {
+      "high": {
+        "precision": 42.9,
+        "recall": 24.0,
+        "n": 25
+      },
+      "low": {
+        "precision": 50.0,
+        "recall": 5.0,
+        "n": 20
+      },
+      "medium": {
+        "precision": 43.8,
+        "recall": 80.0,
+        "n": 35
+      }
+    },
+    "calibration": {
+      "mean_intent_confidence": 97.9,
+      "intent_accuracy": 100.0,
+      "gap_points": 2.1
+    },
+    "route_agreement": 75.0,
+    "route_confusion": {
+      "expected auto_respond -> got auto_respond": 45,
+      "expected escalate -> got escalate": 15,
+      "expected escalate -> got auto_respond": 17,
+      "expected auto_respond -> got escalate": 3
+    },
+    "retrieval_hit_rate": 96.2,
+    "citations_within_retrieved": 100.0,
+    "auto_replies_citing_an_expected_doc": 97.8
+  },
+  "safety": {
+    "protected_tickets": 14,
+    "auto_responses_on_protected_tickets": 0
+  },
+  "governance": {
+    "decisions_logged": {
+      "classification": 80,
+      "routing": 80,
+      "generation": 64,
+      "validation": 64
+    },
+    "decisions_expected": {
+      "classification": 80,
+      "routing": 80,
+      "generation": 64,
+      "validation": 64
+    },
+    "reconciles": true,
+    "guardrail_activations": {
+      "grounding": 2,
+      "tone": 2,
+      "confidence": 2
+    },
+    "pii_detections": 0,
+    "auto_replies_with_disclosure": 100.0,
+    "escalations_with_complete_packet": 100.0
+  },
+  "fairness": {
+    "tier": {
+      "groups": {
+        "business": {
+          "n": 30,
+          "auto_rate": 90.0,
+          "route_agreement": 73.3,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 3.3
+        },
+        "enterprise": {
+          "n": 8,
+          "auto_rate": 87.5,
+          "route_agreement": 87.5,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 0.0
+        },
+        "standard": {
+          "n": 42,
+          "auto_rate": 66.7,
+          "route_agreement": 73.8,
+          "retrieval_hit_rate": 92.0,
+          "guardrail_block_rate": 2.4
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 23.3,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 14.2,
+          "flag": true
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 8.0,
+          "flag": true
+        },
+        "guardrail_block_rate": {
+          "gap_points": 3.3,
+          "flag": false
+        }
+      }
+    },
+    "region": {
+      "groups": {
+        "asia_pacific": {
+          "n": 21,
+          "auto_rate": 81.0,
+          "route_agreement": 81.0,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 4.8
+        },
+        "europe": {
+          "n": 25,
+          "auto_rate": 80.0,
+          "route_agreement": 76.0,
+          "retrieval_hit_rate": 94.7,
+          "guardrail_block_rate": 4.0
+        },
+        "latin_america": {
+          "n": 7,
+          "auto_rate": 57.1,
+          "route_agreement": 85.7,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 0.0
+        },
+        "north_america": {
+          "n": 27,
+          "auto_rate": 77.8,
+          "route_agreement": 66.7,
+          "retrieval_hit_rate": 92.9,
+          "guardrail_block_rate": 0.0
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 23.9,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 19.0,
+          "flag": true
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 7.1,
+          "flag": true
+        },
+        "guardrail_block_rate": {
+          "gap_points": 4.8,
+          "flag": false
+        }
+      }
+    },
+    "fluency": {
+      "groups": {
+        "fluent": {
+          "n": 61,
+          "auto_rate": 77.0,
+          "route_agreement": 82.0,
+          "retrieval_hit_rate": 95.5,
+          "guardrail_block_rate": 1.6
+        },
+        "non_fluent": {
+          "n": 19,
+          "auto_rate": 78.9,
+          "route_agreement": 52.6,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 5.3
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 1.9,
+          "flag": false
+        },
+        "route_agreement": {
+          "gap_points": 29.4,
+          "flag": true
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 4.5,
+          "flag": false
+        },
+        "guardrail_block_rate": {
+          "gap_points": 3.7,
+          "flag": false
+        }
+      }
+    }
+  },
+  "answer_quality": null
+}

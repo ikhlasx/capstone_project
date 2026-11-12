@@ -202,7 +202,8 @@ class Generator:
         if not passages:
             raise GenerationFailed("no_passages")
         messages = build_messages(self.prompt, ticket, passages)
-        key = LLMCache.key(self.model, self.prompt.label, messages)
+        # The provider name is part of the key so stub answers never get served as real ones.
+        key = LLMCache.key(f"{self.provider.name}:{self.model}", self.prompt.label, messages)
 
         if self.cache is not None:
             hit = self.cache.get(key)

@@ -1,0 +1,583 @@
+[
+  {
+    "ticket_id": "VAL-0048",
+    "channel": "chat",
+    "received_at": "2026-03-04T07:36:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: one of our engineers believes their credentials may have been exposed in breach at another service. What should we be doing right now? please tell what to do.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.984,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.529125
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.505063
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.48896
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.461255
+      },
+      {
+        "chunk_id": "DOC-SEC-002#notes",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Notes",
+        "score": 0.401518
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0043",
+    "channel": "forum",
+    "received_at": "2026-03-06T08:07:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via forum: Suspicious activity in audit log One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9949,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.564909
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.559873
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.54002
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.503199
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.473629
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0067",
+    "channel": "docs_comment",
+    "received_at": "2026-03-06T11:13:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via docs_comment: Suspicious activity in audit log We have found activity in our audit log from an address none of us recognise, going back to yesterday morning. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9875,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.611478
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.478609
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.444258
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.412663
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.411991
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0003",
+    "channel": "docs_comment",
+    "received_at": "2026-04-17T12:48:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (high urgency), via docs_comment: It is not working nothing is loading properly today. Can someone look into this? kindly check and revert.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9726,
+    "urgency": "high",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0068",
+    "channel": "email",
+    "received_at": "2026-04-29T13:07:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log we having found activity in our audit log from address none of us recognise, going back to around 14:00 yesterday. Resources created that nobody on the team claims.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9826,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.629926
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.475973
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.440462
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.419135
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.417696
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0078",
+    "channel": "docs_comment",
+    "received_at": "2026-03-03T19:53:00Z",
+    "customer_tier": "business",
+    "summary": "database_issue (medium urgency), via docs_comment: Database restore taking hours connection not available error coming. we scale up service then problem start. please check.",
+    "likely_intent": "database_issue",
+    "intent_confidence": 0.9979,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the relationship between the database connection pool exhaustion and the database restore taking hours",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-PERF-003#symptoms",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Symptoms",
+        "score": 0.45186
+      },
+      {
+        "chunk_id": "DOC-PERF-003#common-causes",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Common causes",
+        "score": 0.448383
+      },
+      {
+        "chunk_id": "DOC-DATA-002#symptoms",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Symptoms",
+        "score": 0.431132
+      },
+      {
+        "chunk_id": "DOC-DATA-002#resolution",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Resolution",
+        "score": 0.417555
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0015",
+    "channel": "forum",
+    "received_at": "2026-03-05T11:24:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via forum: Urgent help needed We have a problem and need someone to call us urgently.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9861,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0002",
+    "channel": "chat",
+    "received_at": "2026-03-12T18:15:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via chat: Following up on my previous message. Any update?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9564,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0024",
+    "channel": "chat",
+    "received_at": "2026-04-04T16:24:00Z",
+    "customer_tier": "standard",
+    "summary": "api_key_issue (medium urgency), via chat: A key can read fine but every write returns a permission error. I created it myself and I thought I gave it full access.",
+    "likely_intent": "api_key_issue",
+    "intent_confidence": 0.9734,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0032",
+    "channel": "chat",
+    "received_at": "2026-04-12T04:59:00Z",
+    "customer_tier": "enterprise",
+    "summary": "feature_request (medium urgency), via chat: It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9846,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.709168
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.444652
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.410177
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0007",
+    "channel": "chat",
+    "received_at": "2026-04-17T23:56:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via chat: We have a problem and need someone to call us urgently.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9647,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0017",
+    "channel": "docs_comment",
+    "received_at": "2026-04-22T23:01:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via docs_comment: Question It is not working. Please help.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9547,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0029",
+    "channel": "chat",
+    "received_at": "2026-05-02T10:12:00Z",
+    "customer_tier": "standard",
+    "summary": "onboarding (medium urgency), via chat: Could you point me at the right starting place? I have created an account but the console has more in it than I expected.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9486,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0035",
+    "channel": "chat",
+    "received_at": "2026-05-06T17:29:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via chat: It is not working. Please help.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9821,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0009",
+    "channel": "docs_comment",
+    "received_at": "2026-05-10T23:59:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via docs_comment: Retention period question We need to demonstrate that read access to customer records is logged. I cannot find these events in the audit log.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9937,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.713031
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.704276
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.60968
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.556464
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.438878
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0056",
+    "channel": "email",
+    "received_at": "2026-05-23T22:21:00Z",
+    "customer_tier": "standard",
+    "summary": "deployment_failure (medium urgency), via email: Build fails in the pipeline Every deployment fails at the health check stage. I have increased the timeout twice already and it makes no difference.",
+    "likely_intent": "deployment_failure",
+    "intent_confidence": 0.997,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the reason for the build failure",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DEPLOY-001#symptoms",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Symptoms",
+        "score": 0.668727
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#common-causes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Common causes",
+        "score": 0.645869
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-003#symptoms",
+        "doc_id": "DOC-DEPLOY-003",
+        "title": "Build failures caused by dependency resolution",
+        "section": "Symptoms",
+        "score": 0.641458
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#resolution",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Resolution",
+        "score": 0.633003
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#notes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Notes",
+        "score": 0.574265
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0030",
+    "channel": "email",
+    "received_at": "2026-03-20T07:49:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via email: Feature request: staged rollouts Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9768,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "VAL-0020",
+    "channel": "email",
+    "received_at": "2026-05-08T02:27:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via email: Would like custom retention Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9837,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  }
+]
