@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import threading
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -79,7 +80,9 @@ class DecisionLog:
         if path != ":memory:":
             Path(path).parent.mkdir(parents=True, exist_ok=True)
         self.run_id = run_id or uuid.uuid4().hex[:12]
-        self._conn = sqlite3.connect(path)
+        # The API handles requests on worker threads, so the connection is shared and guarded by a lock.
+        self._conn = sqlite3.connect(path, check_same_thread=False)
+        self._lock = threading.Lock()
         self._conn.executescript(SCHEMA)
         self._conn.commit()
 
@@ -89,9 +92,10 @@ class DecisionLog:
             row[f] = json.dumps(row[f], ensure_ascii=False)
         row["run_id"] = self.run_id
         cols = ", ".join(row)
-        self._conn.execute(f"INSERT INTO decisions ({cols}) VALUES ({', '.join('?' * len(row))})",
-                           list(row.values()))
-        self._conn.commit()
+        with self._lock:
+            self._conn.execute(f"INSERT INTO decisions ({cols}) VALUES ({', '.join('?' * len(row))})",
+                               list(row.values()))
+            self._conn.commit()
         return record.decision_id
 
     def count_by_stage(self, run_id: str | None = None) -> dict[str, int]:

@@ -85,6 +85,18 @@ def sort_escalations(packets: Sequence[EscalationPacket]) -> list[EscalationPack
     return sorted(packets, key=lambda p: (URGENCY_ORDER.get(p.urgency, 1), p.received_at or far_future, p.ticket_id))
 
 
+def emergency_escalation(ticket: Ticket, exc: Exception) -> TicketResult:
+    """Last line of defence: if processing itself blows up, hand the ticket to a person."""
+    reason = f"Unexpected error while processing ({type(exc).__name__}); a person must handle this ticket."
+    return TicketResult(
+        ticket_id=ticket.ticket_id, action="escalate", rule="internal_error", reason=reason, error=type(exc).__name__,
+        packet=EscalationPacket(ticket_id=ticket.ticket_id, channel=ticket.channel.value, received_at=ticket.received_at,
+                                customer_tier=ticket.customer_tier, summary=summarise(ticket, None),
+                                likely_intent="unknown", intent_confidence=0.0, urgency="medium",
+                                reason=reason, rule="internal_error", unsure_about="",
+                                ingest_warnings=list(ticket.ingest_warnings)))
+
+
 class Pipeline:
     def __init__(self, classifier: TicketClassifier, retriever: Retriever, generator: Generator | None,
                  log: DecisionLog, routing: RoutingConfig = RoutingConfig(), top_k: int = 5):

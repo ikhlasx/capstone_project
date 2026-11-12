@@ -1,0 +1,75 @@
+name: CI
+
+# Runs the test suite and an end-to-end harness run on every push and pull request.
+# No API key is used: the harness runs with the stub provider, so CI never calls a paid model.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONIOENCODING: utf-8
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      OPENROUTER_API_KEY: ""
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Cache the embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-all-MiniLM-L6-v2-v1
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # The CPU-only build of torch avoids downloading several GB of GPU libraries.
+          pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          pip check
+
+      - name: Run the tests
+        run: python -m pytest tests/ -v
+
+      - name: End-to-end run on the validation set (stub provider, no API key)
+        run: |
+          python -m evaluation.harness --input data/validation_tickets.json --output ci-run --provider stub
+          python - <<'EOF'
+          import json, sys
+          m = json.load(open("ci-run/metrics.json", encoding="utf-8"))
+          problems = []
+          if m["volume"]["processed"] != 80:
+              problems.append(f"processed {m['volume']['processed']} of 80 tickets")
+          if not m["governance"]["reconciles"]:
+              problems.append("decision log does not reconcile")
+          if m["safety"]["auto_responses_on_protected_tickets"] != 0:
+              problems.append("a protected ticket was auto-answered")
+          print("processed:", m["volume"]["processed"], "| auto-answered:", m["volume"]["auto_answered"],
+                "| reconciles:", m["governance"]["reconciles"],
+                "| protected auto-answered:", m["safety"]["auto_responses_on_protected_tickets"])
+          sys.exit("CI check failed: " + "; ".join(problems) if problems else 0)
+          EOF
+
+      - name: Keep the run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-run-report
+          path: ci-run/metrics.md
+          if-no-files-found: ignore

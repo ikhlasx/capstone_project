@@ -11,7 +11,7 @@ FDE Capstone, IIT Roorkee. Author: Ikhlas PV. AI assistance is declared in the r
 Requires Python 3.11.
 
 ```bash
-git clone <repo-url> capstone
+git clone https://github.com/ikhlasx/capstone_project capstone
 cd capstone
 python -m venv .venv
 ```
@@ -49,6 +49,28 @@ an API key.
 | `results.jsonl` | One line per ticket: the action, the reason, and the reply or escalation packet |
 | `escalation_queue.json` | Escalated tickets ordered by urgency, then age |
 | `decisions.db` | The decision log for the run (SQLite, one row per stage per ticket) |
+
+## Run it as a service
+
+```bash
+uvicorn src.api:app --port 8000
+```
+
+| Endpoint | What it does |
+|---|---|
+| `GET /health` | Whether the index is loaded and a model provider is configured |
+| `POST /tickets` | Process one ticket (any channel's fields) and return the reply or the escalation packet |
+| `GET /metrics` | Prometheus metrics: tickets by action and rule, guardrail blocks, drafting failures, latency |
+
+```bash
+curl -X POST localhost:8000/tickets -H "Content-Type: application/json"   -d '{"ticket_id": "T-1", "channel": "chat", "body": "my deployment keeps dying at the health check stage"}'
+```
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs on every push: it installs the pinned requirements, runs the full
+test suite, and processes the validation set end to end with the stub provider. It uses no API
+key, and it fails if any protected ticket is auto-answered or the decision log does not reconcile.
 
 ## How a ticket moves through the system
 

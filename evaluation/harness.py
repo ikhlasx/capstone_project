@@ -31,7 +31,7 @@ from src.config import get_settings
 from src.generate import StubProvider
 from src.ingest import load_tickets
 from src.models import IngestError, Ticket
-from src.pipeline import EscalationPacket, Pipeline, TicketResult, build_pipeline, sort_escalations, summarise
+from src.pipeline import Pipeline, TicketResult, build_pipeline, emergency_escalation, sort_escalations
 
 
 def infer_label(tickets: list[Ticket], path: str) -> str:
@@ -41,17 +41,6 @@ def infer_label(tickets: list[Ticket], path: str) -> str:
     if prefixes == {"VAL"}:
         return "validation"
     return "hidden/unlabelled" if not any(t.labels for t in tickets) else Path(path).stem
-
-
-def emergency_escalation(ticket: Ticket, exc: Exception) -> TicketResult:
-    reason = f"Unexpected error while processing ({type(exc).__name__}); a person must handle this ticket."
-    return TicketResult(
-        ticket_id=ticket.ticket_id, action="escalate", rule="internal_error", reason=reason, error=type(exc).__name__,
-        packet=EscalationPacket(ticket_id=ticket.ticket_id, channel=ticket.channel.value, received_at=ticket.received_at,
-                                customer_tier=ticket.customer_tier, summary=summarise(ticket, None),
-                                likely_intent="unknown", intent_confidence=0.0, urgency="medium",
-                                reason=reason, rule="internal_error", unsure_about="",
-                                ingest_warnings=list(ticket.ingest_warnings)))
 
 
 def load_ground_truth(path: str | None) -> dict[str, dict] | None:

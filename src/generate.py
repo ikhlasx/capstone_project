@@ -14,6 +14,7 @@ import hashlib
 import json
 import re
 import sqlite3
+import threading
 import time
 from pathlib import Path
 from typing import Callable, Protocol, Sequence
@@ -123,7 +124,8 @@ class LLMCache:
     def __init__(self, path: str | Path):
         if str(path) != ":memory:":
             Path(path).parent.mkdir(parents=True, exist_ok=True)
-        self._conn = sqlite3.connect(str(path))
+        self._conn = sqlite3.connect(str(path), check_same_thread=False)
+        self._lock = threading.Lock()
         self._conn.execute("CREATE TABLE IF NOT EXISTS cache (key TEXT PRIMARY KEY, response TEXT NOT NULL)")
         self._conn.commit()
         self.hits = 0
@@ -135,7 +137,8 @@ class LLMCache:
         return hashlib.sha256(blob.encode()).hexdigest()
 
     def get(self, key: str) -> str | None:
-        row = self._conn.execute("SELECT response FROM cache WHERE key = ?", (key,)).fetchone()
+        with self._lock:
+            row = self._conn.execute("SELECT response FROM cache WHERE key = ?", (key,)).fetchone()
         if row:
             self.hits += 1
             return row[0]
@@ -143,8 +146,9 @@ class LLMCache:
         return None
 
     def put(self, key: str, response: str) -> None:
-        self._conn.execute("INSERT OR REPLACE INTO cache (key, response) VALUES (?, ?)", (key, response))
-        self._conn.commit()
+        with self._lock:
+            self._conn.execute("INSERT OR REPLACE INTO cache (key, response) VALUES (?, ?)", (key, response))
+            self._conn.commit()
 
 
 # --- prompt assembly and parsing -----------------------------------------------------------
