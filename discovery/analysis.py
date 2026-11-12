@@ -118,6 +118,27 @@ def main():
     no_doc = [i for i, ts in by.items() if not any(L(t)["expected_doc_ids"] for t in ts)]
     out.append(f"\nIntents with no supporting article: {no_doc}")
 
+    # ---- E11. Answerable tickets split by what humans actually did
+    out.append("\n## E11. Answerable tickets: first-contact resolved vs escalated\n")
+    out.append("Of the 357 tickets answerable from documentation, split by whether a human resolved at first contact or escalated.\n")
+    ans_fcr = [t for t in ans if H(t)["first_contact_resolution"] and not H(t)["escalated"]]
+    ans_esc2 = [t for t in ans if H(t)["escalated"]]
+    out.append("| Group | Tickets | Median resolution (min) | Mean CSAT | Repeat contact |")
+    out.append("|---|---|---|---|---|")
+    out.append(
+        f"| Answerable — resolved at first contact | {len(ans_fcr)} | "
+        f"{median([H(t)['resolution_time_minutes'] for t in ans_fcr])} | "
+        f"{mean([H(t)['csat_rating'] for t in ans_fcr])} | "
+        f"{pct(sum(bool(H(t)['repeat_contact']) for t in ans_fcr), len(ans_fcr))} |"
+    )
+    out.append(
+        f"| Answerable — escalated to tier two | {len(ans_esc2)} | "
+        f"{median([H(t)['resolution_time_minutes'] for t in ans_esc2])} | "
+        f"{mean([H(t)['csat_rating'] for t in ans_esc2])} | "
+        f"{pct(sum(bool(H(t)['repeat_contact']) for t in ans_esc2), len(ans_esc2))} |"
+    )
+    out.append(f"\nSource: `history.first_contact_resolution`, `history.escalated`, `history.resolution_time_minutes`, `history.csat_rating`, `history.repeat_contact`.")
+
     # ---- Private data
     out.append("\n## E10. Private data appearing in ticket bodies\n")
     out.append("| Pattern | Tickets containing it |\n|---|---|")

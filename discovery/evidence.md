@@ -134,6 +134,17 @@ Effort proxy = sum of historical resolution minutes (an estimate; elapsed time, 
 
 Intents with no supporting article: ['feature_request', 'unclear_request']
 
+## E11. Answerable tickets: first-contact resolved vs escalated
+
+Of the 357 tickets answerable from documentation, split by whether a human resolved at first contact or escalated.
+
+| Group | Tickets | Median resolution (min) | Mean CSAT | Repeat contact |
+|---|---|---|---|---|
+| Answerable — resolved at first contact | 219 | 32 | 3.41 | 0% |
+| Answerable — escalated to tier two | 138 | 716.5 | 2.56 | 42% |
+
+Source: `history.first_contact_resolution`, `history.escalated`, `history.resolution_time_minutes`, `history.csat_rating`, `history.repeat_contact`.
+
 ## E10. Private data appearing in ticket bodies
 
 | Pattern | Tickets containing it |
