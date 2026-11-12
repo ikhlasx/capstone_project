@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "label": "development",
+    "input": "data/development_tickets.json",
+    "run_id": "25bf148d3ca7",
+    "started_at": "2026-11-12T04:49:27+00:00",
+    "wall_seconds": 881.1,
+    "confidence_threshold": 0.8,
+    "relevance_threshold": 0.4,
+    "provider": "openrouter",
+    "model": "meta-llama/llama-3.1-8b-instruct"
+  },
+  "volume": {
+    "processed": 500,
+    "ingest_errors": 0,
+    "auto_answered": 393,
+    "escalated": 107,
+    "blocked_by_guardrails": 7,
+    "generation_failed": 0,
+    "stage_errors": 0,
+    "rules": {
+      "answerable": 393,
+      "protected_intent": 87,
+      "no_relevant_passage": 13,
+      "guardrail_block": 7
+    }
+  },
+  "business": {
+    "first_contact_resolution": 78.6,
+    "escalation_rate": 21.4,
+    "system_response_seconds": {
+      "mean": 1.76,
+      "median": 0.08
+    },
+    "history_baseline": {
+      "tickets_with_history": 500,
+      "first_contact_resolution": 43.8,
+      "escalation_rate": 56.2,
+      "median_resolution_minutes": 214.0
+    }
+  },
+  "technical": {
+    "latency_ms": {
+      "triage_p50": 44.3,
+      "triage_p95": 59.0,
+      "total_p50": 77.2,
+      "total_p95": 9265.3
+    },
+    "cached_generations": 157,
+    "intent_accuracy": 100.0,
+    "intent_macro_precision": 100.0,
+    "intent_per_class": {
+      "account_access": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 22
+      },
+      "api_key_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 18
+      },
+      "api_usage_question": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 24
+      },
+      "authentication_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 20
+      },
+      "billing_query": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 24
+      },
+      "compliance_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "configuration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 17
+      },
+      "data_export": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 29
+      },
+      "data_residency": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 29
+      },
+      "database_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "deployment_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 27
+      },
+      "feature_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 20
+      },
+      "integration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 21
+      },
+      "onboarding": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 22
+      },
+      "performance_degradation": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 23
+      },
+      "quota_or_overage": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 23
+      },
+      "rate_limit": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 13
+      },
+      "rollback_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 28
+      },
+      "security_incident": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "sso_configuration": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "unclear_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 15
+      },
+      "webhook_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 21
+      }
+    },
+    "urgency_accuracy": 58.6,
+    "urgency_per_class": {
+      "high": {
+        "precision": 73.6,
+        "recall": 53.4,
+        "n": 146
+      },
+      "low": {
+        "precision": 88.9,
+        "recall": 6.2,
+        "n": 128
+      },
+      "medium": {
+        "precision": 53.8,
+        "recall": 91.6,
+        "n": 226
+      }
+    },
+    "calibration": {
+      "mean_intent_confidence": 98.5,
+      "intent_accuracy": 100.0,
+      "gap_points": 1.5
+    },
+    "route_agreement": 78.8,
+    "route_confusion": {
+      "expected auto_respond -> got auto_respond": 299,
+      "expected escalate -> got auto_respond": 94,
+      "expected escalate -> got escalate": 95,
+      "expected auto_respond -> got escalate": 12
+    },
+    "retrieval_hit_rate": 93.0,
+    "citations_within_retrieved": 100.0,
+    "auto_replies_citing_an_expected_doc": 93.0
+  },
+  "safety": {
+    "protected_tickets": 87,
+    "auto_responses_on_protected_tickets": 0
+  },
+  "governance": {
+    "decisions_logged": {
+      "classification": 500,
+      "routing": 500,
+      "generation": 400,
+      "validation": 400
+    },
+    "decisions_expected": {
+      "classification": 500,
+      "routing": 500,
+      "generation": 400,
+      "validation": 400
+    },
+    "reconciles": true,
+    "guardrail_activations": {
+      "grounding": 7,
+      "tone": 7,
+      "confidence": 7
+    },
+    "pii_detections": 0,
+    "auto_replies_with_disclosure": 100.0,
+    "escalations_with_complete_packet": 100.0
+  },
+  "fairness": {
+    "tier": {
+      "groups": {
+        "business": {
+          "n": 164,
+          "auto_rate": 75.6,
+          "route_agreement": 81.7,
+          "retrieval_hit_rate": 90.2,
+          "guardrail_block_rate": 1.2
+        },
+        "enterprise": {
+          "n": 83,
+          "auto_rate": 84.3,
+          "route_agreement": 77.1,
+          "retrieval_hit_rate": 94.9,
+          "guardrail_block_rate": 0.0
+        },
+        "standard": {
+          "n": 253,
+          "auto_rate": 78.7,
+          "route_agreement": 77.5,
+          "retrieval_hit_rate": 94.3,
+          "guardrail_block_rate": 2.0
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 8.7,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 4.6,
+          "flag": false
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 4.7,
+          "flag": false
+        },
+        "guardrail_block_rate": {
+          "gap_points": 2.0,
+          "flag": false
+        }
+      }
+    },
+    "region": {
+      "groups": {
+        "asia_pacific": {
+          "n": 119,
+          "auto_rate": 73.9,
+          "route_agreement": 76.5,
+          "retrieval_hit_rate": 92.1,
+          "guardrail_block_rate": 0.8
+        },
+        "europe": {
+          "n": 151,
+          "auto_rate": 80.8,
+          "route_agreement": 82.1,
+          "retrieval_hit_rate": 92.2,
+          "guardrail_block_rate": 0.7
+        },
+        "latin_america": {
+          "n": 60,
+          "auto_rate": 86.7,
+          "route_agreement": 78.3,
+          "retrieval_hit_rate": 95.3,
+          "guardrail_block_rate": 1.7
+        },
+        "north_america": {
+          "n": 170,
+          "auto_rate": 77.1,
+          "route_agreement": 77.6,
+          "retrieval_hit_rate": 93.5,
+          "guardrail_block_rate": 2.4
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 12.8,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 5.6,
+          "flag": true
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 3.2,
+          "flag": false
+        },
+        "guardrail_block_rate": {
+          "gap_points": 1.7,
+          "flag": false
+        }
+      }
+    },
+    "fluency": {
+      "groups": {
+        "fluent": {
+          "n": 380,
+          "auto_rate": 79.7,
+          "route_agreement": 78.4,
+          "retrieval_hit_rate": 94.8,
+          "guardrail_block_rate": 1.1
+        },
+        "non_fluent": {
+          "n": 120,
+          "auto_rate": 75.0,
+          "route_agreement": 80.0,
+          "retrieval_hit_rate": 87.4,
+          "guardrail_block_rate": 2.5
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 4.7,
+          "flag": false
+        },
+        "route_agreement": {
+          "gap_points": 1.6,
+          "flag": false
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 7.4,
+          "flag": true
+        },
+        "guardrail_block_rate": {
+          "gap_points": 1.4,
+          "flag": false
+        }
+      }
+    }
+  },
+  "answer_quality": {
+    "replies_with_reference": 175,
+    "replies_with_must_mention": 57,
+    "must_mention_coverage": 43.9,
+    "must_not_claim_violations": 0
+  }
+}

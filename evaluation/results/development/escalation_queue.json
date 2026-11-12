@@ -1,0 +1,4362 @@
+[
+  {
+    "ticket_id": "DEV-0475",
+    "channel": "email",
+    "received_at": "2026-03-01T11:25:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log one of our engineers believes their credentials may have been exposed in breach at another service. What should we be doing right now? this is urgent for us.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9947,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.570012
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.563251
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.54195
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.501499
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.478382
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0210",
+    "channel": "email",
+    "received_at": "2026-03-05T17:57:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Possible account compromise A former employee appears to still have access three weeks after leaving. We have found API calls made under their account. This is urgent.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9839,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.639209
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.59404
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.544144
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.512456
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#notes",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Notes",
+        "score": 0.475908
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0139",
+    "channel": "chat",
+    "received_at": "2026-03-05T23:58:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: former employee appears to still have access three weeks after leaving. we having found API calls made under their account. sorry for my english.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9562,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.551219
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.512018
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.47496
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.452723
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#symptoms",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Symptoms",
+        "score": 0.416439
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0470",
+    "channel": "forum",
+    "received_at": "2026-03-06T00:50:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via forum: Suspicious activity in audit log One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9949,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.564909
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.559873
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.54002
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.503199
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.473629
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0107",
+    "channel": "email",
+    "received_at": "2026-03-06T20:30:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Possible account compromise We have found activity in our audit log from an address none of us recognise, going back to late last night. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9909,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.692456
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.610014
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.528159
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.481336
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.460712
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0211",
+    "channel": "docs_comment",
+    "received_at": "2026-03-06T22:59:00Z",
+    "customer_tier": "enterprise",
+    "summary": "security_incident (high urgency), via docs_comment: Key committed to a public repo we are having found activity in our audit log from address none of us recognise, going back to late last night. Resources were created that nobody on team claims. sorry for my english.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9752,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.582773
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.581786
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.535881
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.479918
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.431838
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0234",
+    "channel": "chat",
+    "received_at": "2026-03-08T23:08:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: former employee appears to still have access three weeks after leaving. we having found API calls made under their account. please tell what to do.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9733,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.553595
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.527057
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.52231
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.495948
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#resolution",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Resolution",
+        "score": 0.45592
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0085",
+    "channel": "chat",
+    "received_at": "2026-03-12T00:26:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via chat: We have found activity in our audit log from an address none of us recognise, going back to earlier today. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9829,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.619198
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.531696
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.467277
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.465665
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.448294
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0391",
+    "channel": "email",
+    "received_at": "2026-03-18T14:57:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9949,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.564909
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.559873
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.54002
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.503199
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.473629
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0164",
+    "channel": "email",
+    "received_at": "2026-03-19T11:51:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Key committed to a public repo We have found activity in our audit log from an address none of us recognise, going back to last Friday. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9791,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.572032
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.552249
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.53616
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.489743
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.424314
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0327",
+    "channel": "chat",
+    "received_at": "2026-03-20T19:53:00Z",
+    "customer_tier": "enterprise",
+    "summary": "security_incident (high urgency), via chat: One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.984,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.527065
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.509553
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.496606
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.465549
+      },
+      {
+        "chunk_id": "DOC-SEC-002#notes",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Notes",
+        "score": 0.40064
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0148",
+    "channel": "forum",
+    "received_at": "2026-03-27T01:41:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via forum: Suspicious activity in audit log We have found activity in our audit log from an address none of us recognise, going back to over the weekend. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9895,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.611347
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.48382
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.455059
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.41563
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.415583
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0254",
+    "channel": "email",
+    "received_at": "2026-03-27T12:56:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Possible account compromise A former employee appears to still have access three weeks after leaving. We have found API calls made under their account. This is urgent.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9839,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.639209
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.59404
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.544144
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.512456
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#notes",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Notes",
+        "score": 0.475908
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0240",
+    "channel": "email",
+    "received_at": "2026-03-29T23:47:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9949,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.564909
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.559873
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.54002
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.503199
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.473629
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0300",
+    "channel": "forum",
+    "received_at": "2026-03-31T02:16:00Z",
+    "customer_tier": "enterprise",
+    "summary": "security_incident (high urgency), via forum: Key committed to a public repo one of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9812,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.637926
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.637102
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.541753
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.497359
+      },
+      {
+        "chunk_id": "DOC-INT-001#resolution",
+        "doc_id": "DOC-INT-001",
+        "title": "Connecting continuous integration pipelines",
+        "section": "Resolution",
+        "score": 0.469493
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0499",
+    "channel": "email",
+    "received_at": "2026-04-01T18:48:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log We have found activity in our audit log from an address none of us recognise, going back to two days ago. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9894,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.615694
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.485329
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.444679
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.428937
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.419749
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0015",
+    "channel": "email",
+    "received_at": "2026-04-05T22:42:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Possible account compromise A former employee appears to still have access three weeks after leaving. We have found API calls made under their account. This is urgent.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9839,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.639209
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.59404
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.544144
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.512456
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#notes",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Notes",
+        "score": 0.475908
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0097",
+    "channel": "docs_comment",
+    "received_at": "2026-04-15T19:31:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via docs_comment: Key committed to a public repo one of our engineers believes their credentials may have been exposed in breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9811,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.637515
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.633242
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.544715
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.488897
+      },
+      {
+        "chunk_id": "DOC-INT-001#resolution",
+        "doc_id": "DOC-INT-001",
+        "title": "Connecting continuous integration pipelines",
+        "section": "Resolution",
+        "score": 0.475057
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0370",
+    "channel": "email",
+    "received_at": "2026-04-17T11:09:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Possible account compromise A former employee appears to still have access three weeks after leaving. We have found API calls made under their account. This is urgent.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9839,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.639209
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.59404
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.544144
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.512456
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#notes",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Notes",
+        "score": 0.475908
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0091",
+    "channel": "docs_comment",
+    "received_at": "2026-04-22T00:10:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (high urgency), via docs_comment: Urgent help needed Nothing is loading properly today. Can someone look into this?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9863,
+    "urgency": "high",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0236",
+    "channel": "forum",
+    "received_at": "2026-04-23T17:46:00Z",
+    "customer_tier": "standard",
+    "summary": "deployment_failure (high urgency), via forum: Health check keeps timing out Builds that worked last week are now failing during dependency resolution. We have not changed our code at all. This is blocking a release we had planned for over the weekend.",
+    "likely_intent": "deployment_failure",
+    "intent_confidence": 0.9947,
+    "urgency": "high",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the reason for the build failure during dependency resolution",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DEPLOY-001#resolution",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Resolution",
+        "score": 0.608274
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#symptoms",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Symptoms",
+        "score": 0.568925
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#common-causes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Common causes",
+        "score": 0.564713
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-003#notes",
+        "doc_id": "DOC-DEPLOY-003",
+        "title": "Build failures caused by dependency resolution",
+        "section": "Notes",
+        "score": 0.543153
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-003#symptoms",
+        "doc_id": "DOC-DEPLOY-003",
+        "title": "Build failures caused by dependency resolution",
+        "section": "Symptoms",
+        "score": 0.513428
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0121",
+    "channel": "email",
+    "received_at": "2026-04-24T04:06:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via email: Key committed to a public repo We have found activity in our audit log from an address none of us recognise, going back to around 14:00 yesterday. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9805,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.574662
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.563167
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.531845
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.492418
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.421835
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0282",
+    "channel": "forum",
+    "received_at": "2026-04-26T23:37:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via forum: Possible account compromise one of our engineers believes their credentials may have been exposed in breach at another service. What should we be doing right now? sorry for my english.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9867,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.591975
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.568796
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.546499
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.458987
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.458591
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0142",
+    "channel": "email",
+    "received_at": "2026-05-01T20:11:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (high urgency), via email: Urgent help needed Nothing is loading properly today. Can someone look into this?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9863,
+    "urgency": "high",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0035",
+    "channel": "chat",
+    "received_at": "2026-05-09T03:40:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: One of our engineers believes their credentials may have been exposed in a breach at another service. What should we be doing right now?",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.984,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.527065
+      },
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.509553
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.496606
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.465549
+      },
+      {
+        "chunk_id": "DOC-SEC-002#notes",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Notes",
+        "score": 0.40064
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0158",
+    "channel": "chat",
+    "received_at": "2026-05-09T20:17:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: one of our engineers believes their credentials may have been exposed in breach at another service. What should we be doing right now? kindly check and revert.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9818,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.577117
+      },
+      {
+        "chunk_id": "DOC-SEC-002#symptoms",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Symptoms",
+        "score": 0.573921
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.533336
+      },
+      {
+        "chunk_id": "DOC-SEC-002#resolution",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Resolution",
+        "score": 0.495492
+      },
+      {
+        "chunk_id": "DOC-SEC-002#notes",
+        "doc_id": "DOC-SEC-002",
+        "title": "Handling exposed secrets and credential rotation",
+        "section": "Notes",
+        "score": 0.439506
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0373",
+    "channel": "chat",
+    "received_at": "2026-05-11T13:21:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (high urgency), via chat: nothing loading properly today. Can someone look into this?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9351,
+    "urgency": "high",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0132",
+    "channel": "chat",
+    "received_at": "2026-05-15T18:31:00Z",
+    "customer_tier": "enterprise",
+    "summary": "security_incident (high urgency), via chat: A former employee appears to still have access three weeks after leaving. We have found API calls made under their account. This is urgent.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9738,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#common-causes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Common causes",
+        "score": 0.555922
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#notes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Notes",
+        "score": 0.523961
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.500141
+      },
+      {
+        "chunk_id": "DOC-AUTH-004#common-causes",
+        "doc_id": "DOC-AUTH-004",
+        "title": "API key rotation and scope management",
+        "section": "Common causes",
+        "score": 0.489817
+      },
+      {
+        "chunk_id": "DOC-ACCT-001#resolution",
+        "doc_id": "DOC-ACCT-001",
+        "title": "Managing team members, roles and permissions",
+        "section": "Resolution",
+        "score": 0.444024
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0184",
+    "channel": "email",
+    "received_at": "2026-05-19T03:37:00Z",
+    "customer_tier": "business",
+    "summary": "security_incident (high urgency), via email: Suspicious activity in audit log we are having found activity in our audit log from address none of us recognise, going back to late last night. Resources were created that nobody on team claims. please tell what to do.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9859,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.615485
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.472288
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.434634
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.424233
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.420232
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0477",
+    "channel": "chat",
+    "received_at": "2026-05-21T18:26:00Z",
+    "customer_tier": "standard",
+    "summary": "security_incident (high urgency), via chat: We have found activity in our audit log from an address none of us recognise, going back to yesterday morning. Resources were created that nobody on the team claims. We need help urgently.",
+    "likely_intent": "security_incident",
+    "intent_confidence": 0.9814,
+    "urgency": "high",
+    "reason": "Intent 'security_incident' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.615135
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.516564
+      },
+      {
+        "chunk_id": "DOC-SEC-001#resolution",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Resolution",
+        "score": 0.453218
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.448229
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.432392
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0295",
+    "channel": "forum",
+    "received_at": "2026-03-01T10:44:00Z",
+    "customer_tier": "business",
+    "summary": "onboarding (medium urgency), via forum: Migrating our app across can you please point me at the right starting place? i am having created an account but console has more in it than I expect. this is urgent for us.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9933,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0005",
+    "channel": "email",
+    "received_at": "2026-03-01T17:05:00Z",
+    "customer_tier": "business",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9858,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.728546
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.447078
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.403067
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0152",
+    "channel": "chat",
+    "received_at": "2026-03-02T13:44:00Z",
+    "customer_tier": "enterprise",
+    "summary": "feature_request (medium urgency), via chat: It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9846,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.709168
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.444652
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.410177
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0165",
+    "channel": "docs_comment",
+    "received_at": "2026-03-02T21:29:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via docs_comment: Need audit logs for an auditor We need to demonstrate that read access to customer records is logged. I cannot find these events in the audit log.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9652,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.708331
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.544278
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.531937
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.518925
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.477142
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0052",
+    "channel": "email",
+    "received_at": "2026-03-03T04:55:00Z",
+    "customer_tier": "standard",
+    "summary": "deployment_failure (medium urgency), via email: Build fails in the pipeline Every deployment fails at the health check stage. I have increased the timeout twice already and it makes no difference.",
+    "likely_intent": "deployment_failure",
+    "intent_confidence": 0.997,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the reason for the build failure",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DEPLOY-001#symptoms",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Symptoms",
+        "score": 0.668727
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#common-causes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Common causes",
+        "score": 0.645869
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-003#symptoms",
+        "doc_id": "DOC-DEPLOY-003",
+        "title": "Build failures caused by dependency resolution",
+        "section": "Symptoms",
+        "score": 0.641458
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#resolution",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Resolution",
+        "score": 0.633003
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#notes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Notes",
+        "score": 0.574265
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0494",
+    "channel": "chat",
+    "received_at": "2026-03-03T08:32:00Z",
+    "customer_tier": "enterprise",
+    "summary": "unclear_request (medium urgency), via chat: it not is working. Please help. please tell what to do.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9776,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0169",
+    "channel": "email",
+    "received_at": "2026-03-04T03:43:00Z",
+    "customer_tier": "standard",
+    "summary": "database_issue (medium urgency), via email: Connection pool exhausted restore is running from long time. database is 400 gb. is it normal?",
+    "likely_intent": "database_issue",
+    "intent_confidence": 0.9981,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the normal duration of a database restore",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-PERF-003#common-causes",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Common causes",
+        "score": 0.6274
+      },
+      {
+        "chunk_id": "DOC-PERF-003#notes",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Notes",
+        "score": 0.603648
+      },
+      {
+        "chunk_id": "DOC-PERF-003#symptoms",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Symptoms",
+        "score": 0.593545
+      },
+      {
+        "chunk_id": "DOC-PERF-003#resolution",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Resolution",
+        "score": 0.522461
+      },
+      {
+        "chunk_id": "DOC-DATA-002#symptoms",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Symptoms",
+        "score": 0.498488
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0426",
+    "channel": "email",
+    "received_at": "2026-03-05T17:05:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via email: Problem with the service We have a problem and need someone to call us urgently.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9667,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0395",
+    "channel": "email",
+    "received_at": "2026-03-05T20:39:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via email: Question We have a problem and need someone to call us urgently.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9654,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0296",
+    "channel": "email",
+    "received_at": "2026-03-07T22:15:00Z",
+    "customer_tier": "business",
+    "summary": "onboarding (medium urgency), via email: New to the platform, where to begin can you please point me at right starting place? i am having created account but console has more in it than I expect. waiting for your reply.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9901,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0355",
+    "channel": "email",
+    "received_at": "2026-03-08T16:40:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via email: Would like custom retention It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9919,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.66992
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.434928
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0013",
+    "channel": "email",
+    "received_at": "2026-03-09T15:37:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Evidence for a compliance review we need to demonstrate that read access to customer records logged. I not able to find these events in audit log.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.975,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.739199
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.581088
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.552887
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.54232
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.479127
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0120",
+    "channel": "forum",
+    "received_at": "2026-03-09T22:38:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via forum: It is not working we are having a problem and need someone to call us urgently. please help fast.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9946,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0235",
+    "channel": "chat",
+    "received_at": "2026-03-10T09:00:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via chat: Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9666,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.491811
+      },
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.481064
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.415744
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0413",
+    "channel": "email",
+    "received_at": "2026-03-10T23:06:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via email: Problem with the service it not working. Please help. sorry for my english.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9761,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0245",
+    "channel": "docs_comment",
+    "received_at": "2026-03-13T05:07:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via docs_comment: Retention period question we need to demonstrate that read access to customer records is logged. I not able to find these events in audit log. please do the needful.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9947,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.711179
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.708803
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.624168
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.550466
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.426106
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0007",
+    "channel": "docs_comment",
+    "received_at": "2026-03-15T16:12:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via docs_comment: Would like custom retention It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9919,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.66992
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.434928
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0214",
+    "channel": "email",
+    "received_at": "2026-03-16T06:02:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via email: Urgent help needed Following up on my previous message. Any update?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9888,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0237",
+    "channel": "email",
+    "received_at": "2026-03-16T07:38:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps We would like to configure our own retention period rather than taking the plan default. Is that something you are considering?",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9848,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.717956
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.529553
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.515178
+      },
+      {
+        "chunk_id": "DOC-BILL-003#common-causes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Common causes",
+        "score": 0.496362
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0328",
+    "channel": "chat",
+    "received_at": "2026-03-16T23:50:00Z",
+    "customer_tier": "standard",
+    "summary": "webhook_issue (medium urgency), via chat: We are receiving the same event several times. Is this expected behaviour or is something wrong with our configuration?",
+    "likely_intent": "webhook_issue",
+    "intent_confidence": 0.9728,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0077",
+    "channel": "email",
+    "received_at": "2026-03-17T17:45:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via email: Would like custom retention It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9919,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.66992
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.434928
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0448",
+    "channel": "email",
+    "received_at": "2026-03-18T08:35:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Need audit logs for an auditor Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.996,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.68859
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.663282
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.658646
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.645268
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.440948
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0133",
+    "channel": "email",
+    "received_at": "2026-03-18T16:06:00Z",
+    "customer_tier": "business",
+    "summary": "authentication_failure (medium urgency), via email: MFA code keeps getting rejected I have been trying to sign in for the last about a week and keep getting an invalid credentials message. I am certain the password is correct because I use a password manager. Nothing has changed at our end t…",
+    "likely_intent": "authentication_failure",
+    "intent_confidence": 0.9869,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the reason for the invalid credentials message, as the ticket does not mention MFA",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-AUTH-002#symptoms",
+        "doc_id": "DOC-AUTH-002",
+        "title": "Multi-factor authentication setup and recovery",
+        "section": "Symptoms",
+        "score": 0.557172
+      },
+      {
+        "chunk_id": "DOC-AUTH-002#common-causes",
+        "doc_id": "DOC-AUTH-002",
+        "title": "Multi-factor authentication setup and recovery",
+        "section": "Common causes",
+        "score": 0.520595
+      },
+      {
+        "chunk_id": "DOC-AUTH-002#resolution",
+        "doc_id": "DOC-AUTH-002",
+        "title": "Multi-factor authentication setup and recovery",
+        "section": "Resolution",
+        "score": 0.453308
+      },
+      {
+        "chunk_id": "DOC-AUTH-001#notes",
+        "doc_id": "DOC-AUTH-001",
+        "title": "Resolving invalid credential errors on login",
+        "section": "Notes",
+        "score": 0.439994
+      },
+      {
+        "chunk_id": "DOC-AUTH-001#common-causes",
+        "doc_id": "DOC-AUTH-001",
+        "title": "Resolving invalid credential errors on login",
+        "section": "Common causes",
+        "score": 0.42883
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0498",
+    "channel": "chat",
+    "received_at": "2026-03-20T06:18:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via chat: Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9884,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.625204
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.613123
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.603786
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.54606
+      },
+      {
+        "chunk_id": "DOC-DATA-001#symptoms",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Symptoms",
+        "score": 0.516053
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0493",
+    "channel": "chat",
+    "received_at": "2026-03-25T15:36:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via chat: Following up on my previous message. Any update?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9564,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0374",
+    "channel": "email",
+    "received_at": "2026-03-28T07:03:00Z",
+    "customer_tier": "standard",
+    "summary": "database_issue (medium urgency), via email: Database restore taking hours we get errors saying no connection is available. This start when we scaled up our service. please do the needful.",
+    "likely_intent": "database_issue",
+    "intent_confidence": 0.9971,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the cause of the issue and the requested action",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-PERF-003#symptoms",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Symptoms",
+        "score": 0.506646
+      },
+      {
+        "chunk_id": "DOC-DATA-002#symptoms",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Symptoms",
+        "score": 0.48776
+      },
+      {
+        "chunk_id": "DOC-DATA-002#resolution",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Resolution",
+        "score": 0.466754
+      },
+      {
+        "chunk_id": "DOC-PERF-003#common-causes",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Common causes",
+        "score": 0.451098
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-002#resolution",
+        "doc_id": "DOC-DEPLOY-002",
+        "title": "Rolling back a failed release",
+        "section": "Resolution",
+        "score": 0.414732
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0224",
+    "channel": "email",
+    "received_at": "2026-04-01T04:54:00Z",
+    "customer_tier": "standard",
+    "summary": "deployment_failure (medium urgency), via email: Build fails in the pipeline Every deployment fails at the health check stage. I have increased the timeout twice already and it makes no difference.",
+    "likely_intent": "deployment_failure",
+    "intent_confidence": 0.997,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the reason for the build failure",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DEPLOY-001#symptoms",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Symptoms",
+        "score": 0.668727
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#common-causes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Common causes",
+        "score": 0.645869
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-003#symptoms",
+        "doc_id": "DOC-DEPLOY-003",
+        "title": "Build failures caused by dependency resolution",
+        "section": "Symptoms",
+        "score": 0.641458
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#resolution",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Resolution",
+        "score": 0.633003
+      },
+      {
+        "chunk_id": "DOC-DEPLOY-001#notes",
+        "doc_id": "DOC-DEPLOY-001",
+        "title": "Container deployments failing during the health check phase",
+        "section": "Notes",
+        "score": 0.574265
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0145",
+    "channel": "chat",
+    "received_at": "2026-04-04T17:25:00Z",
+    "customer_tier": "standard",
+    "summary": "api_key_issue (medium urgency), via chat: A key can read fine but every write returns a permission error. I created it myself and I thought I gave it full access.",
+    "likely_intent": "api_key_issue",
+    "intent_confidence": 0.9734,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0159",
+    "channel": "chat",
+    "received_at": "2026-04-05T06:13:00Z",
+    "customer_tier": "business",
+    "summary": "webhook_issue (medium urgency), via chat: same event coming many times. is it normal or we have wrong setting?",
+    "likely_intent": "webhook_issue",
+    "intent_confidence": 0.9434,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0348",
+    "channel": "docs_comment",
+    "received_at": "2026-04-05T08:54:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via docs_comment: Need audit logs for an auditor Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.996,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.68859
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.663282
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.658646
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.645268
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.440948
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0398",
+    "channel": "email",
+    "received_at": "2026-04-08T10:47:00Z",
+    "customer_tier": "enterprise",
+    "summary": "unclear_request (medium urgency), via email: Urgent help needed Following up on my previous message. Any update?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9888,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0257",
+    "channel": "forum",
+    "received_at": "2026-04-12T08:31:00Z",
+    "customer_tier": "enterprise",
+    "summary": "feature_request (medium urgency), via forum: Please add per-project spend caps It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9858,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.728546
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.447078
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.403067
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0226",
+    "channel": "forum",
+    "received_at": "2026-04-16T19:55:00Z",
+    "customer_tier": "business",
+    "summary": "onboarding (medium urgency), via forum: New to the platform, where to begin Could you point me at the right starting place? I have created an account but the console has more in it than I expected.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9884,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0248",
+    "channel": "chat",
+    "received_at": "2026-04-17T15:51:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via chat: Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9884,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.625204
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.613123
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.603786
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.54606
+      },
+      {
+        "chunk_id": "DOC-DATA-001#symptoms",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Symptoms",
+        "score": 0.516053
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0051",
+    "channel": "chat",
+    "received_at": "2026-04-20T02:05:00Z",
+    "customer_tier": "business",
+    "summary": "api_key_issue (medium urgency), via chat: A key can read fine but every write returns a permission error. I created it myself and I thought I gave it full access.",
+    "likely_intent": "api_key_issue",
+    "intent_confidence": 0.9734,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0246",
+    "channel": "email",
+    "received_at": "2026-04-20T17:22:00Z",
+    "customer_tier": "enterprise",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9858,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.728546
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.447078
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.403067
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0260",
+    "channel": "email",
+    "received_at": "2026-04-21T15:06:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via email: Need audit logs for an auditor Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.996,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.68859
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.663282
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.658646
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.645268
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.440948
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0150",
+    "channel": "email",
+    "received_at": "2026-04-22T01:31:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps we want to configure our own retention period rather than taking plan default. Is that something you are considering?",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9854,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.720878
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.528952
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.517079
+      },
+      {
+        "chunk_id": "DOC-BILL-003#common-causes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Common causes",
+        "score": 0.507582
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.404304
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0418",
+    "channel": "docs_comment",
+    "received_at": "2026-04-22T05:43:00Z",
+    "customer_tier": "standard",
+    "summary": "unclear_request (medium urgency), via docs_comment: Urgent help needed We have a problem and need someone to call us urgently.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9861,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0265",
+    "channel": "email",
+    "received_at": "2026-04-22T07:54:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Evidence for a compliance review Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9904,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.647089
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.600435
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.597232
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.569245
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.527208
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0003",
+    "channel": "docs_comment",
+    "received_at": "2026-04-29T10:22:00Z",
+    "customer_tier": "enterprise",
+    "summary": "compliance_request (medium urgency), via docs_comment: Evidence for a compliance review Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9904,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.647089
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.600435
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.597232
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.569245
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.527208
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0119",
+    "channel": "chat",
+    "received_at": "2026-05-01T22:36:00Z",
+    "customer_tier": "enterprise",
+    "summary": "api_key_issue (medium urgency), via chat: A key can read fine but every write returns a permission error. I created it myself and I thought I gave it full access.",
+    "likely_intent": "api_key_issue",
+    "intent_confidence": 0.9734,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0253",
+    "channel": "docs_comment",
+    "received_at": "2026-05-03T19:46:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via docs_comment: Retention period question We need to demonstrate that read access to customer records is logged. I cannot find these events in the audit log.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9937,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.713031
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.704276
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.60968
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.556464
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.438878
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0392",
+    "channel": "email",
+    "received_at": "2026-05-04T11:16:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps It would be very useful to set spend caps per project rather than only for the whole organisation. At the moment one team's overspend affects everyone.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9858,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.728546
+      },
+      {
+        "chunk_id": "DOC-ACCT-002#resolution",
+        "doc_id": "DOC-ACCT-002",
+        "title": "Organisation setup and project structure",
+        "section": "Resolution",
+        "score": 0.447078
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.403067
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0146",
+    "channel": "email",
+    "received_at": "2026-05-05T17:20:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via email: Retention period question Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9925,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.65885
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.636531
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.584521
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.546189
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.498803
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0231",
+    "channel": "docs_comment",
+    "received_at": "2026-05-05T18:00:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via docs_comment: Retention period question Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9925,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.65885
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.636531
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.584521
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.546189
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.498803
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0351",
+    "channel": "docs_comment",
+    "received_at": "2026-05-06T18:01:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via docs_comment: Need audit logs for an auditor Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9924,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.687137
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.684863
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.633717
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.60992
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.574002
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0421",
+    "channel": "email",
+    "received_at": "2026-05-08T22:46:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via email: Urgent help needed It is not working. Please help.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9907,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0268",
+    "channel": "email",
+    "received_at": "2026-05-09T12:04:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Retention period question Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9782,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.538982
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.467587
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.454375
+      },
+      {
+        "chunk_id": "DOC-DATA-002#common-causes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Common causes",
+        "score": 0.434551
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.426551
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0249",
+    "channel": "email",
+    "received_at": "2026-05-10T03:58:00Z",
+    "customer_tier": "enterprise",
+    "summary": "unclear_request (medium urgency), via email: Problem with the service Following up on my previous message. Any update?",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.9563,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0114",
+    "channel": "email",
+    "received_at": "2026-05-10T08:32:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via email: Retention period question Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9782,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.538982
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.467587
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.454375
+      },
+      {
+        "chunk_id": "DOC-DATA-002#common-causes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Common causes",
+        "score": 0.434551
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.426551
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0378",
+    "channel": "email",
+    "received_at": "2026-05-11T07:30:00Z",
+    "customer_tier": "business",
+    "summary": "database_issue (medium urgency), via email: Database restore taking hours connection not available error coming. we scale up service then problem start. please check.",
+    "likely_intent": "database_issue",
+    "intent_confidence": 0.9979,
+    "urgency": "medium",
+    "reason": "A drafted answer was blocked by: grounding, tone, confidence.",
+    "rule": "guardrail_block",
+    "unsure_about": "the relationship between the database connection pool exhaustion and the database restore taking hours",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-PERF-003#symptoms",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Symptoms",
+        "score": 0.45186
+      },
+      {
+        "chunk_id": "DOC-PERF-003#common-causes",
+        "doc_id": "DOC-PERF-003",
+        "title": "Database connection pool exhaustion",
+        "section": "Common causes",
+        "score": 0.448383
+      },
+      {
+        "chunk_id": "DOC-DATA-002#symptoms",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Symptoms",
+        "score": 0.431132
+      },
+      {
+        "chunk_id": "DOC-DATA-002#resolution",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Resolution",
+        "score": 0.417555
+      }
+    ],
+    "blocked_draft": "",
+    "guardrail_failures": {
+      "grounding": "fail: no citations",
+      "tone": "fail: reply length 0 is outside 40-2500",
+      "confidence": "fail: the model said the passages do not answer the ticket"
+    },
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0456",
+    "channel": "email",
+    "received_at": "2026-05-11T07:45:00Z",
+    "customer_tier": "business",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps we want to configure our own retention period rather than taking the plan default. Is that something you are considering? sorry for my english.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9844,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.732805
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.530477
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.518216
+      },
+      {
+        "chunk_id": "DOC-BILL-003#common-causes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Common causes",
+        "score": 0.50849
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.403324
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0141",
+    "channel": "chat",
+    "received_at": "2026-05-12T15:15:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via chat: Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9666,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.491811
+      },
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.481064
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.415744
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0273",
+    "channel": "chat",
+    "received_at": "2026-05-12T21:08:00Z",
+    "customer_tier": "standard",
+    "summary": "onboarding (medium urgency), via chat: can you please point me at right starting place? i am having created account but the console has more in it than I expect.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9694,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0310",
+    "channel": "docs_comment",
+    "received_at": "2026-05-15T22:57:00Z",
+    "customer_tier": "business",
+    "summary": "onboarding (medium urgency), via docs_comment: Migrating our app across Could you point me at the right starting place? I have created an account but the console has more in it than I expected.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9911,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0170",
+    "channel": "chat",
+    "received_at": "2026-05-17T17:24:00Z",
+    "customer_tier": "standard",
+    "summary": "onboarding (medium urgency), via chat: Could you point me at the right starting place? I have created an account but the console has more in it than I expected.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9486,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0028",
+    "channel": "email",
+    "received_at": "2026-05-19T06:12:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Evidence for a compliance review Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9904,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.647089
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.600435
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.597232
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.569245
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.527208
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0344",
+    "channel": "email",
+    "received_at": "2026-05-19T15:21:00Z",
+    "customer_tier": "business",
+    "summary": "feature_request (medium urgency), via email: Please add per-project spend caps we want to configure our own retention period rather than taking plan default. Is that something you are considering? please do the needful.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9849,
+    "urgency": "medium",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.718808
+      },
+      {
+        "chunk_id": "DOC-BILL-003#resolution",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Resolution",
+        "score": 0.53089
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.50923
+      },
+      {
+        "chunk_id": "DOC-BILL-003#common-causes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Common causes",
+        "score": 0.496906
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.400782
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0191",
+    "channel": "chat",
+    "received_at": "2026-05-20T03:59:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via chat: Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9884,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.625204
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.613123
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.603786
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.54606
+      },
+      {
+        "chunk_id": "DOC-DATA-001#symptoms",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Symptoms",
+        "score": 0.516053
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0215",
+    "channel": "chat",
+    "received_at": "2026-05-21T13:14:00Z",
+    "customer_tier": "business",
+    "summary": "database_issue (medium urgency), via chat: connection not available error coming. we scale up service then problem start. please check.",
+    "likely_intent": "database_issue",
+    "intent_confidence": 0.9467,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0187",
+    "channel": "forum",
+    "received_at": "2026-05-22T01:38:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via forum: Evidence for a compliance review our auditor has asked for access records covering last six months. Can I export these, and that period within what you retain? waiting for your reply.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9876,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.626995
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.593586
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.590322
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.548971
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.525627
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0109",
+    "channel": "chat",
+    "received_at": "2026-05-22T14:29:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via chat: Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9884,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.625204
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.613123
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.603786
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.54606
+      },
+      {
+        "chunk_id": "DOC-DATA-001#symptoms",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Symptoms",
+        "score": 0.516053
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0134",
+    "channel": "chat",
+    "received_at": "2026-05-22T15:29:00Z",
+    "customer_tier": "business",
+    "summary": "unclear_request (medium urgency), via chat: it not working. Please help.",
+    "likely_intent": "unclear_request",
+    "intent_confidence": 0.978,
+    "urgency": "medium",
+    "reason": "Intent 'unclear_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0021",
+    "channel": "email",
+    "received_at": "2026-05-24T11:44:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Evidence for a compliance review Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.992,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.492316
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.490444
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.47101
+      },
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.465476
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.409395
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0102",
+    "channel": "docs_comment",
+    "received_at": "2026-05-24T15:00:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via docs_comment: Retention period question Our auditor has asked for access records covering the last six months. Can I export these, and is that period within what you retain?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9925,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.65885
+      },
+      {
+        "chunk_id": "DOC-SEC-001#notes",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Notes",
+        "score": 0.636531
+      },
+      {
+        "chunk_id": "DOC-DATA-001#notes",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Notes",
+        "score": 0.584521
+      },
+      {
+        "chunk_id": "DOC-DATA-001#resolution",
+        "doc_id": "DOC-DATA-001",
+        "title": "Exporting account data and scheduled extracts",
+        "section": "Resolution",
+        "score": 0.546189
+      },
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.498803
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0474",
+    "channel": "email",
+    "received_at": "2026-05-25T10:30:00Z",
+    "customer_tier": "standard",
+    "summary": "onboarding (medium urgency), via email: Migrating our app across can you please point me at right starting place? i am having created account but console has more in it than I expect. waiting for your reply.",
+    "likely_intent": "onboarding",
+    "intent_confidence": 0.9926,
+    "urgency": "medium",
+    "reason": "No documentation passage scored at or above 0.40.",
+    "rule": "no_relevant_passage",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0356",
+    "channel": "chat",
+    "received_at": "2026-05-27T15:20:00Z",
+    "customer_tier": "business",
+    "summary": "compliance_request (medium urgency), via chat: We need to demonstrate that read access to customer records is logged. I cannot find these events in the audit log.",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9599,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-SEC-003#symptoms",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Symptoms",
+        "score": 0.669605
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.536066
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.491938
+      },
+      {
+        "chunk_id": "DOC-SEC-003#notes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Notes",
+        "score": 0.479722
+      },
+      {
+        "chunk_id": "DOC-SEC-001#symptoms",
+        "doc_id": "DOC-SEC-001",
+        "title": "Responding to a suspected account compromise",
+        "section": "Symptoms",
+        "score": 0.447441
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0324",
+    "channel": "email",
+    "received_at": "2026-05-29T10:11:00Z",
+    "customer_tier": "standard",
+    "summary": "compliance_request (medium urgency), via email: Retention period question Our policy requires two years of retention. What are our options given what the platform retains by default?",
+    "likely_intent": "compliance_request",
+    "intent_confidence": 0.9782,
+    "urgency": "medium",
+    "reason": "Intent 'compliance_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.538982
+      },
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.467587
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.454375
+      },
+      {
+        "chunk_id": "DOC-DATA-002#common-causes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Common causes",
+        "score": 0.434551
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.426551
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0332",
+    "channel": "docs_comment",
+    "received_at": "2026-03-08T20:39:00Z",
+    "customer_tier": "enterprise",
+    "summary": "feature_request (low urgency), via docs_comment: Would like custom retention Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9837,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0293",
+    "channel": "email",
+    "received_at": "2026-03-13T06:59:00Z",
+    "customer_tier": "business",
+    "summary": "feature_request (low urgency), via email: Please add per-project spend caps Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9954,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.559814
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.413632
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0168",
+    "channel": "chat",
+    "received_at": "2026-03-22T00:54:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via chat: are staged rollouts on roadmap? We want to move traffic gradually rather than all at once. please tell what to do.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9661,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0402",
+    "channel": "docs_comment",
+    "received_at": "2026-04-01T00:00:00Z",
+    "customer_tier": "business",
+    "summary": "feature_request (low urgency), via docs_comment: Feature request: staged rollouts We would like to configure our own retention period rather than taking the plan default. Is that something you are considering?",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9618,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.494389
+      },
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.473098
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.437496
+      },
+      {
+        "chunk_id": "DOC-INT-001#notes",
+        "doc_id": "DOC-INT-001",
+        "title": "Connecting continuous integration pipelines",
+        "section": "Notes",
+        "score": 0.437491
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.411078
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0202",
+    "channel": "forum",
+    "received_at": "2026-04-06T05:35:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via forum: Feature request: staged rollouts We would like to configure our own retention period rather than taking the plan default. Is that something you are considering?",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9618,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-002#notes",
+        "doc_id": "DOC-BILL-002",
+        "title": "Changing plans, and how proration is calculated",
+        "section": "Notes",
+        "score": 0.494389
+      },
+      {
+        "chunk_id": "DOC-DATA-002#notes",
+        "doc_id": "DOC-DATA-002",
+        "title": "Backups, retention and point-in-time restore",
+        "section": "Notes",
+        "score": 0.473098
+      },
+      {
+        "chunk_id": "DOC-SEC-003#resolution",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Resolution",
+        "score": 0.437496
+      },
+      {
+        "chunk_id": "DOC-INT-001#notes",
+        "doc_id": "DOC-INT-001",
+        "title": "Connecting continuous integration pipelines",
+        "section": "Notes",
+        "score": 0.437491
+      },
+      {
+        "chunk_id": "DOC-SEC-003#common-causes",
+        "doc_id": "DOC-SEC-003",
+        "title": "Audit logging and compliance evidence",
+        "section": "Common causes",
+        "score": 0.411078
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0175",
+    "channel": "docs_comment",
+    "received_at": "2026-04-30T11:45:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via docs_comment: Please add per-project spend caps Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9954,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.559814
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.413632
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0193",
+    "channel": "forum",
+    "received_at": "2026-05-04T12:22:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via forum: Please add per-project spend caps Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9954,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.559814
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.413632
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  },
+  {
+    "ticket_id": "DEV-0381",
+    "channel": "email",
+    "received_at": "2026-05-21T12:32:00Z",
+    "customer_tier": "standard",
+    "summary": "feature_request (low urgency), via email: Please add per-project spend caps Are staged rollouts on the roadmap? We would like to move traffic gradually rather than all at once.",
+    "likely_intent": "feature_request",
+    "intent_confidence": 0.9954,
+    "urgency": "low",
+    "reason": "Intent 'feature_request' is always handled by a person.",
+    "rule": "protected_intent",
+    "unsure_about": "",
+    "retrieved": [
+      {
+        "chunk_id": "DOC-BILL-003#notes",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Notes",
+        "score": 0.559814
+      },
+      {
+        "chunk_id": "DOC-BILL-003#symptoms",
+        "doc_id": "DOC-BILL-003",
+        "title": "Usage limits, overage and spend controls",
+        "section": "Symptoms",
+        "score": 0.413632
+      }
+    ],
+    "blocked_draft": null,
+    "guardrail_failures": {},
+    "ingest_warnings": []
+  }
+]
