@@ -133,3 +133,11 @@ def test_api_works_without_a_provider(fake_classifier, fake_retriever, tmp_path)
     with TestClient(create_app(factory)) as c:
         assert c.get("/health").json()["can_draft_answers"] is False
         assert c.post("/tickets", json=ANSWERABLE).json()["rule"] == "generation_failed:no_api_key"
+
+
+def test_guardrail_demo_blocks_every_bad_draft(capsys):
+    from scripts.demo import GUARDRAIL_CASES, main as demo_main
+    assert demo_main(["guardrail"]) == 0
+    out = capsys.readouterr().out
+    assert out.count("BLOCKED by:") == len(GUARDRAIL_CASES)
+    assert "PASSED all checks" in out

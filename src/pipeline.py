@@ -255,6 +255,8 @@ def build_pipeline(settings: Settings, database_url: str, run_id: str | None = N
     from .retrieve import RetrievalUnavailable
 
     embedder = embedder or SentenceTransformerEmbedder(settings.embedding_model)
+    # Load the embedding model now, so its start-up cost is not counted in the first ticket's latency.
+    embedder.encode(["warm up"])
 
     retriever = Retriever(embedder, settings.chroma_path)
     try:
