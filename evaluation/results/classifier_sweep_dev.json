@@ -1,0 +1,789 @@
+{
+  "label": "development",
+  "input": "data/development_tickets.json",
+  "tickets": 500,
+  "embedder": "all-MiniLM-L6-v2",
+  "intent": {
+    "accuracy": 99.8,
+    "macro_precision": 99.8,
+    "macro_recall": 99.7,
+    "per_class": {
+      "account_access": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 22
+      },
+      "api_key_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 18
+      },
+      "api_usage_question": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 24
+      },
+      "authentication_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 20
+      },
+      "billing_query": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 24
+      },
+      "compliance_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "configuration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 17
+      },
+      "data_export": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 29
+      },
+      "data_residency": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 29
+      },
+      "database_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "deployment_failure": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 27
+      },
+      "feature_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 20
+      },
+      "integration_help": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 21
+      },
+      "onboarding": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 22
+      },
+      "performance_degradation": {
+        "precision": 95.8,
+        "recall": 100.0,
+        "n": 23
+      },
+      "quota_or_overage": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 23
+      },
+      "rate_limit": {
+        "precision": 100.0,
+        "recall": 92.3,
+        "n": 13
+      },
+      "rollback_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 28
+      },
+      "security_incident": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "sso_configuration": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 26
+      },
+      "unclear_request": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 15
+      },
+      "webhook_issue": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "n": 21
+      }
+    },
+    "calibration": {
+      "bands": [
+        {
+          "band": "0.4-0.6",
+          "n": 1,
+          "mean_confidence": 43.1,
+          "accuracy": 0.0
+        },
+        {
+          "band": "0.6-0.8",
+          "n": 6,
+          "mean_confidence": 72.0,
+          "accuracy": 100.0
+        },
+        {
+          "band": "0.8-1.0",
+          "n": 493,
+          "mean_confidence": 97.6,
+          "accuracy": 100.0
+        }
+      ],
+      "ece_points": 2.8,
+      "mean_confidence": 97.2,
+      "accuracy": 99.8,
+      "gap_points": 2.6
+    }
+  },
+  "urgency": {
+    "accuracy": 52.2,
+    "majority_baseline": 45.2,
+    "per_class": {
+      "high": {
+        "precision": 64.5,
+        "recall": 41.1,
+        "n": 146
+      },
+      "low": {
+        "precision": 38.5,
+        "recall": 3.9,
+        "n": 128
+      },
+      "medium": {
+        "precision": 49.7,
+        "recall": 86.7,
+        "n": 226
+      }
+    },
+    "calibration": {
+      "bands": [
+        {
+          "band": "0.2-0.4",
+          "n": 30,
+          "mean_confidence": 38.8,
+          "accuracy": 43.3
+        },
+        {
+          "band": "0.4-0.6",
+          "n": 461,
+          "mean_confidence": 48.9,
+          "accuracy": 52.9
+        },
+        {
+          "band": "0.6-0.8",
+          "n": 9,
+          "mean_confidence": 63.3,
+          "accuracy": 44.4
+        }
+      ],
+      "ece_points": 4.3,
+      "mean_confidence": 48.5,
+      "accuracy": 52.2,
+      "gap_points": 3.7
+    }
+  },
+  "relevance_threshold": 0.4,
+  "routing": {
+    "default (dispute + residency rules on, incident rule off)": [
+      {
+        "threshold": 0.3,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.35,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.4,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.45,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.5,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.55,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.6,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.65,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.7,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.75,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.8,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.85,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.9,
+        "auto_rate": 78.0,
+        "route_agreement": 77.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 97,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.95,
+        "auto_rate": 71.0,
+        "route_agreement": 72.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 91,
+        "escalated_but_answerable": 47
+      }
+    ],
+    "incident rule on": [
+      {
+        "threshold": 0.3,
+        "auto_rate": 78.2,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 14
+      },
+      {
+        "threshold": 0.35,
+        "auto_rate": 78.2,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 14
+      },
+      {
+        "threshold": 0.4,
+        "auto_rate": 78.2,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 14
+      },
+      {
+        "threshold": 0.45,
+        "auto_rate": 78.0,
+        "route_agreement": 78.2,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 15
+      },
+      {
+        "threshold": 0.5,
+        "auto_rate": 78.0,
+        "route_agreement": 78.2,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 15
+      },
+      {
+        "threshold": 0.55,
+        "auto_rate": 78.0,
+        "route_agreement": 78.2,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 15
+      },
+      {
+        "threshold": 0.6,
+        "auto_rate": 78.0,
+        "route_agreement": 78.2,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 15
+      },
+      {
+        "threshold": 0.65,
+        "auto_rate": 77.6,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 17
+      },
+      {
+        "threshold": 0.7,
+        "auto_rate": 77.6,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 17
+      },
+      {
+        "threshold": 0.75,
+        "auto_rate": 77.4,
+        "route_agreement": 77.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.8,
+        "auto_rate": 77.4,
+        "route_agreement": 77.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.85,
+        "auto_rate": 77.4,
+        "route_agreement": 77.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 94,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.9,
+        "auto_rate": 76.2,
+        "route_agreement": 76.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 93,
+        "escalated_but_answerable": 23
+      },
+      {
+        "threshold": 0.95,
+        "auto_rate": 69.2,
+        "route_agreement": 72.2,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 87,
+        "escalated_but_answerable": 52
+      }
+    ],
+    "dispute rule off": [
+      {
+        "threshold": 0.3,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.35,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.4,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.45,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.5,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.55,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.6,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.65,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.7,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.75,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.8,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.85,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.9,
+        "auto_rate": 78.0,
+        "route_agreement": 77.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 97,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.95,
+        "auto_rate": 71.0,
+        "route_agreement": 72.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 91,
+        "escalated_but_answerable": 47
+      }
+    ],
+    "residency rule off": [
+      {
+        "threshold": 0.3,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.35,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.4,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.45,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.5,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.55,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.6,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.65,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.7,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.75,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.8,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.85,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.9,
+        "auto_rate": 78.0,
+        "route_agreement": 77.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 97,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.95,
+        "auto_rate": 71.0,
+        "route_agreement": 72.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 91,
+        "escalated_but_answerable": 47
+      }
+    ],
+    "no protected-margin rule": [
+      {
+        "threshold": 0.3,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.35,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.4,
+        "auto_rate": 80.0,
+        "route_agreement": 78.6,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 9
+      },
+      {
+        "threshold": 0.45,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.5,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.55,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.6,
+        "auto_rate": 79.8,
+        "route_agreement": 78.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 10
+      },
+      {
+        "threshold": 0.65,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.7,
+        "auto_rate": 79.4,
+        "route_agreement": 78.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 12
+      },
+      {
+        "threshold": 0.75,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.8,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.85,
+        "auto_rate": 79.2,
+        "route_agreement": 77.8,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 98,
+        "escalated_but_answerable": 13
+      },
+      {
+        "threshold": 0.9,
+        "auto_rate": 78.0,
+        "route_agreement": 77.0,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 97,
+        "escalated_but_answerable": 18
+      },
+      {
+        "threshold": 0.95,
+        "auto_rate": 71.0,
+        "route_agreement": 72.4,
+        "unsafe_auto": 0,
+        "auto_but_should_escalate": 91,
+        "escalated_but_answerable": 47
+      }
+    ]
+  },
+  "default_threshold": 0.8,
+  "rules_at_default": {
+    "answerable": 396,
+    "protected_intent": 87,
+    "no_relevant_passage": 11,
+    "low_confidence": 6
+  },
+  "billing_dispute": {
+    "no|no": 21,
+    "no|yes": 3
+  },
+  "label_disagreement": {
+    "duplicate_groups": 97,
+    "tickets_in_groups": 254,
+    "groups_conflicting_intent": 0,
+    "groups_conflicting_urgency": 67,
+    "groups_conflicting_answerable_from_docs": 36,
+    "groups_conflicting_expected_route": 30
+  },
+  "oracle_agreement": 79.6
+}

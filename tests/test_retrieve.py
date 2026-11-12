@@ -6,14 +6,13 @@ skipped if that model cannot be loaded (for example, offline CI).
 """
 from __future__ import annotations
 
-import hashlib
 import json
-import math
 import re
 from pathlib import Path
 
 import pytest
 
+from tests.helpers import FakeEmbedder
 from src.chunking import Chunk, chunk_corpus, chunk_document, load_corpus, slugify
 from src.retrieve import (
     Passage,
@@ -24,22 +23,6 @@ from src.retrieve import (
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 CHUNK_ID = re.compile(r"^DOC-[A-Z]+-\d{3}#[a-z0-9-]+$")
-
-
-class FakeEmbedder:
-    """Hashed bag-of-words, L2-normalised. Shared words mean a higher cosine score."""
-
-    name = "fake-bow-256"
-
-    def encode(self, texts):
-        out = []
-        for text in texts:
-            v = [0.0] * 256
-            for w in re.findall(r"[a-z0-9]+", text.lower()):
-                v[int(hashlib.md5(w.encode()).hexdigest(), 16) % 256] += 1.0
-            n = math.sqrt(sum(x * x for x in v)) or 1.0
-            out.append([x / n for x in v])
-        return out
 
 
 @pytest.fixture(scope="module")

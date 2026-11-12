@@ -40,6 +40,10 @@ class Settings:
     confidence_threshold: float
     retrieval_top_k: int
     relevance_threshold: float
+    classifier_path: str
+    training_data: str
+    docs_path: str
+    cache_path: str
 
     @property
     def has_api_key(self) -> bool:
@@ -60,4 +64,8 @@ def get_settings() -> Settings:
         # Provisional: picked from the development-set sweep (evaluation/retrieval_sweep.py).
         # The final value is the student's decision and must be recorded in the PRD.
         relevance_threshold=_float("RELEVANCE_THRESHOLD", 0.40),
+        classifier_path=os.getenv("CLASSIFIER_PATH", "./storage/models/classifier.joblib"),
+        training_data=os.getenv("TRAINING_DATA", "data/development_tickets.json"),
+        docs_path=os.getenv("DOCS_PATH", "data/documentation.json"),
+        cache_path=os.getenv("CACHE_PATH", "./storage/llm_cache.sqlite"),
     )
