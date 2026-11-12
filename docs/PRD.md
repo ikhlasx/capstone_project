@@ -61,9 +61,11 @@ You asked for a chatbot to bring the response-time number down without adding he
 |---|---|---|---|
 | FR-01 | A2 | Step 2: ingest | Done: 54 tests passing |
 | FR-03 | A4 | Step 3: retrieval | Done: 29 tests passing, threshold sweep on development data |
-| FR-02, FR-04, FR-05, FR-09, FR-11, FR-12, FR-13 | A3, A5, A8 | Step 4: classifier, routing, decision log | Next |
-| FR-06, FR-07, FR-08, FR-10 | A6, A7 | Step 5: generator and guardrails | To do |
-| FR-14 | A9, A10 | Step 6: full unattended run | To do |
+| FR-02, FR-04, FR-05, FR-09, FR-11, FR-12, FR-13 | A3, A5, A8 | Step 4: classifier, routing, decision log | Done: 39 tests passing, calibrated LR (C=64), decision log |
+| FR-06, FR-07, FR-08, FR-10 | A6, A7 | Step 5: generator and guardrails | Done: 49 tests passing, PR-01@1.0 prompt, 6 guardrails |
+| FR-14 | A9, A10 | Step 6: full unattended run | Done: validation run completed (77.5% FCR, 0 protected auto) |
+| NFR-02 | A11 | Step 7: failure-injection tests | Done: 18 tests passing, all failure modes cleanly escalate |
+| NFR-01, NFR-05, NFR-08 | A12 | Step 8: API, Prometheus metrics, CI | Done: 38 tests passing, FastAPI, Prometheus, GitHub Actions |
 
 ## 5. Non-functional requirements
 
