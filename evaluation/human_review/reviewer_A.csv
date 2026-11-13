@@ -8,7 +8,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Create a project, then a service within it. Resources belong to services and services belong to projects.
 2. Connect a repository or push a container image. The build service detects common project layouts automatically.
 3. Set any environment variables the application needs before the first deployment rather than after it.
-4. Deploy, then watch the logs for the first sixty seconds. Most first-deployment problems are visible immediately in startup output.",,,,
+4. Deploy, then watch the logs for the first sixty seconds. Most first-deployment problems are visible immediately in startup output.",no,all,yes,
 2,VAL-0074,account_access,"Remove a departing team member
 We are tightening permissions after a review and I want to understand how group membership interacts with directly assigned roles.","Prefer group membership to direct role assignment, so that access can be reviewed in one place. [DOC-ACCT-001#notes] Removing the last account owner is not permitted, so you should transfer ownership before removing the account. [DOC-ACCT-001#common-causes] The invitation was granted at project scope rather than organisation scope, or a group membership grants broader access than the direct role suggests, which may be why the user has access they shouldn't.
 
@@ -20,7 +20,7 @@ If this does not solve the problem, reply to this message and a support engineer
 - A group membership grants broader access than the direct role suggests
 
 [DOC-ACCT-001#notes] Managing team members, roles and permissions — Notes
-Removing the last account owner is not permitted. Transfer ownership before removing the account.",,,,
+Removing the last account owner is not permitted. Transfer ownership before removing the account.",no,all,yes,
 3,VAL-0051,integration_help,"Log forwarding stopped working
 log forwarding to our external system stop two days ago and not resumed by itself. destination is healthy as we know. kindly check and revert.","Based on the information provided, it appears that log forwarding has paused due to consecutive failures. According to [DOC-INT-002#notes], forwarding pauses after one hour of consecutive failures and must be resumed manually once the destination is healthy. To resolve the issue, please check the forwarding status page to see the last successful delivery and any error returned by the destination, as described in [DOC-INT-002#resolution].
 
@@ -33,7 +33,7 @@ Forwarding pauses after one hour of consecutive failures and must be resumed man
 1. Check the forwarding status page, which shows the last successful delivery and any error returned by the destination.
 2. Expect a delay of up to two minutes on metrics, since they are aggregated before being sent.
 3. Apply a level filter at source so that debug output is not forwarded, which is usually the reason volume is higher than expected.
-4. Verify the destination credential separately if delivery has stopped entirely, as expired credentials are the most common cause.",,,,
+4. Verify the destination credential separately if delivery has stopped entirely, as expired credentials are the most common cause.",no,all,yes,
 4,VAL-0077,billing_query,"Our billing period does not seem to match the calendar month, which is making reconciliation difficult. Is that expected?","The billing period runs from the anniversary of the subscription date, not the first of the month [DOC-BILL-001#resolution].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -42,7 +42,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Open the usage breakdown for the period, which itemises charges by service and by environment.
 2. Look for resources in staging or development environments, which are billed at the same rate as production.
 3. Check the billing period dates at the top of the invoice. The period runs from the anniversary of the subscription date.
-4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",,,,
+4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",no,all,yes,
 5,VAL-0022,performance_degradation,"Service slow at peak hours
 The service is noticeably slow during our afternoon peak and fine the rest of the day. We have autoscaling enabled so I expected it to cope.","We recommend checking the median and 95th percentile latency on the metrics page to see if there's a large gap, which could indicate contention or queueing. Also, review the dependency timing breakdown on the trace view to identify whether the time is being spent in your service or waiting on another. Additionally, consider adjusting the autoscaling policy if load is predictable, as scaling on request count responds sooner than scaling on processor utilisation. [DOC-PERF-001#resolution] [DOC-PERF-001#common-causes] [DOC-PERF-002#resolution]
 
@@ -63,7 +63,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check whether the service is sitting at its configured maximum. Scaling stops there regardless of load.
 2. Choose a scaling metric that reflects the pressure you actually face. Request concurrency reacts faster than processor utilisation for request-bound services.
 3. Set the cooldown longer than your startup time so that new instances are counted before another scaling decision is taken.
-4. Set a minimum instance count above zero for latency-sensitive services to avoid cold starts on the first request.",,,,
+4. Set a minimum instance count above zero for latency-sensitive services to avoid cold starts on the first request.",no,all,yes,
 6,VAL-0042,configuration_help,Our staging environment is picking up production configuration values. I cannot work out where the override is coming from.,"It's possible that the variable was set at project scope but read at service scope [DOC-DEPLOY-004#common-causes]. You can also check if an environment override exists that is not visible on the main settings page [DOC-DEPLOY-004#common-causes].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -71,7 +71,7 @@ Sources: Configuring environment variables and secrets (DOC-DEPLOY-004).
 If this does not solve the problem, reply to this message and a support engineer will pick it up.","[DOC-DEPLOY-004#common-causes] Configuring environment variables and secrets — Common causes
 - The variable was set at project scope but read at service scope
 - The application logs its configuration at startup
-- An environment override exists that is not visible on the main settings page",,,,
+- An environment override exists that is not visible on the main settings page",no,all,yes,
 7,VAL-0076,data_residency,"Need data to stay in the EU
 We need our data to remain within the EU for a contract we are signing. Our organisation was created some time ago and I am not sure which region it is in.","To check the region where your primary data is stored, please go to the organisation settings page. This region is fixed at creation and determines where primary data is stored. [DOC-DATA-003#resolution] If you need to change the region, please contact support for a planned migration. [DOC-DATA-003#resolution] Additionally, you can review the backup replication setting to ensure it meets your single-region requirement. [DOC-DATA-003#resolution] Note that metadata such as account names and billing records is stored centrally regardless of the data region. [DOC-DATA-003#notes]
 
@@ -84,7 +84,7 @@ Metadata such as account names and billing records is stored centrally regardles
 1. Check the region shown on the organisation settings page. This is fixed at creation and determines where primary data is stored.
 2. Enable read replicas in additional regions to reduce latency for distant users without moving primary storage.
 3. Review the backup replication setting if a single-region requirement applies, since cross-region replication is enabled by default.
-4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",,,,
+4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",no,all,yes,
 8,VAL-0027,quota_or_overage,"Usage allowance already consumed
 Overage charges appeared on our invoice that we were not expecting. We thought we were well inside our allowance.","Overage charges may have accrued beyond the plan allowance, which can happen if the plan allowance was consumed before the end of the period [DOC-BILL-003#common-causes]. To investigate, please open the usage breakdown for the period, which itemises charges by service and by environment [DOC-BILL-001#resolution].
 
@@ -99,7 +99,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-BILL-003#common-causes] Usage limits, overage and spend controls — Common causes
 - Plan allowance was consumed before the end of the period
 - A spend cap was configured and reached
-- Overage protection is disabled, so usage continued beyond the allowance",,,,
+- Overage protection is disabled, so usage continued beyond the allowance",no,all,yes,
 9,VAL-0039,api_key_issue,"API key returning 401
 One of our engineers pushed a key to a public repository by mistake. We need to replace it without taking the service down. What is the correct order of operations?","To rotate the API key without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key. If the key was exposed publicly, revoke it immediately rather than waiting for the rotation window. [DOC-AUTH-004#resolution] [DOC-AUTH-004#notes]
 
@@ -112,7 +112,7 @@ Keys issued to individual users are removed when that user is deleted. Use servi
 1. Check the API keys page for the key's status and expiry. Revoked and expired keys are listed with the date and the user who acted.
 2. Review the scopes attached to the key. Read-only keys cannot write, and project-scoped keys cannot reach organisation endpoints.
 3. To rotate without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key.
-4. If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window.",,,,
+4. If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window.",no,all,yes,
 10,VAL-0028,deployment_failure,"Deployment rolls back every time
 builds that work last week are now fail during dependency resolution. we having not change our code at all.","Build failures caused by dependency resolution are often due to unpinned dependencies releasing new incompatible versions. We recommend pinning your dependencies with exact versions and committing the lock file. [DOC-DEPLOY-003#common-causes] [DOC-DEPLOY-003#resolution] If you're unsure which version changed, you can check the build logs for the full resolution output for thirty days. [DOC-DEPLOY-003#notes]
 
@@ -130,7 +130,7 @@ Build logs retain the full resolution output for thirty days, which is usually e
 1. Pin your dependencies with exact versions and commit the lock file. Unpinned dependencies are the cause in the large majority of cases of this kind.
 2. Compare the runtime version declared in your build configuration against the version you use locally.
 3. Clear the build cache from the settings page and trigger a fresh build to rule out a corrupted artefact.
-4. If a specific dependency is failing to resolve, check whether its registry is reachable from the build network.",,,,
+4. If a specific dependency is failing to resolve, check whether its registry is reachable from the build network.",no,all,yes,
 11,VAL-0057,deployment_failure,"Deployment rolls back every time
 Our deployment reaches running and then rolls back after about a minute. The logs mention a health check timeout. It runs perfectly on my machine and in staging.","To troubleshoot the issue, please confirm that the container is listening on the port declared in the service definition [DOC-DEPLOY-001#resolution]. Also, inspect the container logs from the failed revision rather than the running one [DOC-DEPLOY-001#resolution]. Additionally, compare the environment variables present in the deployment against those the application requires [DOC-DEPLOY-001#resolution].
 
@@ -140,7 +140,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Confirm the container is listening on the port declared in the service definition. A mismatch here produces a health check failure that looks like a timeout.
 2. Increase the initial delay if the application needs time to warm up before it can answer. Thirty seconds is a reasonable starting point for services that load models or caches.
 3. Compare the environment variables present in the deployment against those the application requires. Missing configuration frequently causes a silent startup failure.
-4. Inspect the container logs from the failed revision rather than the running one; the rollback replaces the logs shown by default.",,,,
+4. Inspect the container logs from the failed revision rather than the running one; the rollback replaces the logs shown by default.",no,all,yes,
 12,VAL-0049,api_key_issue,"Need to rotate an exposed key
 key can read fine but every write returns permission error. I created it myself and I thought I gave it full access. please help fast.","If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window. Review the scopes attached to the key. Read-only keys cannot write, and project-scoped keys cannot reach organisation endpoints. To rotate without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key. Check the API keys page for the key's status and expiry. Revoked and expired keys are listed with the date and the user who acted.
 
@@ -155,7 +155,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-AUTH-004#symptoms] API key rotation and scope management — Symptoms
 - A previously working key returns 401 Unauthorized
 - A key works for some endpoints and not others
-- A key needs replacing after accidental exposure",,,,
+- A key needs replacing after accidental exposure",no,some,yes,"Citation in footer list, no inline bracket anchor"
 13,VAL-0008,account_access,We are tightening permissions after a review and I want to understand how group membership interacts with directly assigned roles.,"Prefer group membership to direct role assignment, so that access can be reviewed in one place. [DOC-ACCT-001#symptoms] [DOC-ACCT-001#resolution] [DOC-ACCT-001#common-causes]
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -174,7 +174,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-ACCT-001#symptoms] Managing team members, roles and permissions — Symptoms
 - A user cannot access a project they should be able to
 - A departing user needs removing
-- Permissions need narrowing after a review",,,,
+- Permissions need narrowing after a review",no,all,yes,
 14,VAL-0019,account_access,"Remove a departing team member
 my team member not able to open project. i give permission already two time. still not working.","To resolve the issue, please check the effective permissions view for the user, which resolves direct roles and group memberships together [DOC-ACCT-001#resolution]. If the user's permissions are correct, please confirm the invitation was accepted [DOC-ACCT-001#resolution]. If the user is departing, it's recommended to remove them rather than only changing their password, and revoke any API keys they created [DOC-ACCT-001#resolution].
 
@@ -184,7 +184,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the effective permissions view for the user, which resolves direct roles and group memberships together.
 2. Confirm the invitation was accepted. Pending invitations appear in a separate section and expire after seven days.
 3. Remove a departing user rather than only changing their password, and revoke any API keys they created.
-4. Prefer group membership to direct role assignment, so that access can be reviewed in one place.",,,,
+4. Prefer group membership to direct role assignment, so that access can be reviewed in one place.",no,all,yes,
 15,VAL-0045,data_export,"Export missing recent records
 I started an export over the weekend and it is still showing as queued. It covers about two million records. Should I cancel and try again?","Jobs covering more than a million records commonly take several minutes. Note that the export reflects the moment the job began, so records created during processing are not included. [DOC-DATA-001#resolution] [DOC-DATA-001#symptoms] [DOC-DATA-001#common-causes]
 
@@ -204,7 +204,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-DATA-001#symptoms] Exporting account data and scheduled extracts — Symptoms
 - An export has not completed
 - The download link has expired
-- The export is missing recent records",,,,
+- The export is missing recent records",no,all,yes,
 16,VAL-0025,deployment_failure,every deployment fails at health check stage. i am having increase timeout twice already and it makes no difference. kindly check and revert.,"We recommend checking the container logs from the failed revision to see if there are any errors or issues that could be causing the health check to fail. Also, please confirm that the container is listening on the port declared in the service definition and that all required environment variables are present in the deployed environment. [DOC-DEPLOY-001#resolution] [DOC-DEPLOY-001#common-causes] [DOC-DEPLOY-001#symptoms]
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -223,7 +223,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-DEPLOY-001#symptoms] Container deployments failing during the health check phase — Symptoms
 - The deployment reaches running and then rolls back
 - Logs show repeated health check timeouts
-- The service works locally but not when deployed",,,,
+- The service works locally but not when deployed",no,all,yes,
 17,VAL-0065,billing_query,"Billing period dates unclear
 There are charges on our invoice for a service I do not believe we use. Could you explain what these relate to?","The billing period runs from the anniversary of the subscription date, not the first of the month [DOC-BILL-001#resolution]. You can check the billing period dates at the top of the invoice to confirm. If you're unsure about the charges, you can open the usage breakdown for the period to see itemised charges by service and by environment [DOC-BILL-001#resolution].
 
@@ -233,7 +233,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Open the usage breakdown for the period, which itemises charges by service and by environment.
 2. Look for resources in staging or development environments, which are billed at the same rate as production.
 3. Check the billing period dates at the top of the invoice. The period runs from the anniversary of the subscription date.
-4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",,,,
+4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",no,all,yes,
 18,VAL-0011,rollback_request,"How do I revert to the previous revision
 We shipped a release yesterday morning that has broken checkout for a portion of our customers. We need to get back to the previous version quickly. What is the fastest safe route?","To revert to the previous revision, open the revisions page for the service and identify the last revision that was healthy. Select roll back on that revision. This will move traffic within roughly thirty seconds and no rebuild takes place. If the release included a database migration, roll the migration back before the service, or the older code will encounter a schema it does not expect. [DOC-DEPLOY-002#resolution] [DOC-DEPLOY-002#symptoms]
 
@@ -247,7 +247,7 @@ If this does not solve the problem, reply to this message and a support engineer
 
 [DOC-DEPLOY-002#symptoms] Rolling back a failed release — Symptoms
 - A release has introduced errors and must be reverted
-- The previous revision is needed while a fix is prepared",,,,
+- The previous revision is needed while a fix is prepared",no,all,yes,
 19,VAL-0058,api_key_issue,"Need to rotate an exposed key
 one of our production keys start returning 401 at around last Friday without any change on our side. Other keys against same account still working. waiting for your reply.","If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window. Review the scopes attached to the key. Read-only keys cannot write, and project-scoped keys cannot reach organisation endpoints. To rotate without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key. Service account keys do not expire by default. Set an expiry and rotate on a schedule.
 
@@ -270,7 +270,7 @@ If this does not solve the problem, reply to this message and a support engineer
 - A key needs replacing after accidental exposure
 
 [DOC-INT-001#notes] Connecting continuous integration pipelines — Notes
-Service account keys do not expire by default. Set an expiry and rotate on a schedule.",,,,
+Service account keys do not expire by default. Set an expiry and rotate on a schedule.",no,some,yes,"Citation in footer list, no inline bracket anchor"
 20,VAL-0018,api_usage_question,"How do I page through large results
 Our cursor seems to stop working partway through a long iteration. Is there an expiry we should be handling?","Cursors expire after one hour. To handle expiry, you should restart from a recorded checkpoint. For large result sets, we recommend using cursor pagination. If you're using offset pagination, it may skip or repeat records when items are inserted mid-iteration. [DOC-API-002#notes] [DOC-API-002#symptoms] [DOC-API-002#resolution]
 
@@ -288,7 +288,7 @@ Cursors expire after one hour. Long-running iterations should handle expiry by r
 [DOC-API-002#symptoms] Pagination and handling large result sets — Symptoms
 - Only the first page of results is returned
 - Iterating through results misses or duplicates records
-- Large queries time out",,,,
+- Large queries time out",no,all,yes,
 21,VAL-0033,webhook_issue,"Duplicate webhook deliveries
 Signature verification fails for every delivery. We are computing the signature exactly as the documentation describes, over the parsed body.","According to the documentation, computing the signature over a parsed body rather than the raw bytes can cause signature verification to fail [DOC-API-003#common-causes]. We recommend re-computing the signature over the raw request body [DOC-API-003#resolution].
 
@@ -303,7 +303,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the webhook delivery log, which records every attempt with the response status and body for the last seven days.
 2. Return 2xx as quickly as possible and process the event asynchronously. Deliveries time out after five seconds.
 3. Compute the signature over the raw request body before any parsing. Re-serialising JSON changes the bytes and invalidates the signature.
-4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",,,,
+4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",no,all,yes,
 22,VAL-0066,data_residency,"Question about backup regions
 one of our customers has asked for written confirmation of where their data is physically stored. Can you please point me to something I can share with them? sorry for my english.","Metadata such as account names and billing records is stored centrally regardless of the data region [DOC-DATA-003#notes]. Data is stored in the region shown on the organisation settings page, which is fixed at creation [DOC-DATA-003#resolution].
 
@@ -316,7 +316,7 @@ Metadata such as account names and billing records is stored centrally regardles
 1. Check the region shown on the organisation settings page. This is fixed at creation and determines where primary data is stored.
 2. Enable read replicas in additional regions to reduce latency for distant users without moving primary storage.
 3. Review the backup replication setting if a single-region requirement applies, since cross-region replication is enabled by default.
-4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",,,,
+4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",no,all,yes,
 23,VAL-0046,api_usage_question,"How do I page through large results
 when i do pagination some record coming two time and some missing. what is correct way?","To page through large results correctly, use cursor pagination by passing the next_cursor value from each response as the cursor parameter of the following request, and stop when it is null [DOC-API-002#resolution]. This will prevent missing or duplicate records. Also, keep page size at or below two hundred [DOC-API-002#resolution].
 
@@ -326,7 +326,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Use cursor pagination for anything that may change while you iterate. Offset pagination will skip or repeat records when items are inserted mid-iteration.
 2. Pass the next_cursor value from each response as the cursor parameter of the following request, and stop when it is null.
 3. Keep page size at or below two hundred. Larger requests are rejected rather than truncated.
-4. For very large extracts, use the export endpoint, which runs asynchronously and returns a download link.",,,,
+4. For very large extracts, use the export endpoint, which runs asynchronously and returns a download link.",no,all,yes,
 24,VAL-0001,api_key_issue,"Need to rotate an exposed key
 One of our production keys started returning 401 at around yesterday morning without any change on our side. Other keys against the same account are still working.","If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window. Review the scopes attached to the key. Read-only keys cannot write, and project-scoped keys cannot reach organisation endpoints. To rotate without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key. Keys issued to individual users are removed when that user is deleted. Use service accounts for anything running in production.
 
@@ -344,7 +344,7 @@ Keys issued to individual users are removed when that user is deleted. Use servi
 1. Check the API keys page for the key's status and expiry. Revoked and expired keys are listed with the date and the user who acted.
 2. Review the scopes attached to the key. Read-only keys cannot write, and project-scoped keys cannot reach organisation endpoints.
 3. To rotate without downtime, create the replacement key first, deploy it, confirm traffic has moved, then revoke the old key.
-4. If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window.",,,,
+4. If a key has been exposed publicly, revoke it immediately rather than waiting for the rotation window.",no,all,yes,Footer citation adequately attributes whole text
 25,VAL-0062,integration_help,"Connecting our CI pipeline
 log forwarding to our external system stop over weekend and not resumed by itself. destination healthy as we know.","We've seen cases where log forwarding pauses after one hour of consecutive failures and must be resumed manually once the destination is healthy [DOC-INT-002#notes]. To troubleshoot, please check the forwarding status page to see the last successful delivery and any error returned by the destination [DOC-INT-002#resolution].
 
@@ -357,7 +357,7 @@ Forwarding pauses after one hour of consecutive failures and must be resumed man
 1. Check the forwarding status page, which shows the last successful delivery and any error returned by the destination.
 2. Expect a delay of up to two minutes on metrics, since they are aggregated before being sent.
 3. Apply a level filter at source so that debug output is not forwarded, which is usually the reason volume is higher than expected.
-4. Verify the destination credential separately if delivery has stopped entirely, as expired credentials are the most common cause.",,,,
+4. Verify the destination credential separately if delivery has stopped entirely, as expired credentials are the most common cause.",no,all,yes,
 26,VAL-0012,rollback_request,"Need to roll back the latest release
 How do I revert to an earlier revision? The release we put out this morning is causing errors and I would rather roll back than try to fix forward.","To roll back to an earlier revision, open the revisions page for the service and identify the last revision that was healthy. Select roll back on that revision. This will restore the container image and its configuration together, but it will not restore data. If the release included a database migration, you should roll the migration back before the service, or the older code will encounter a schema it does not expect. [DOC-DEPLOY-002#resolution] [DOC-DEPLOY-002#notes] [DOC-DEPLOY-002#resolution]
 
@@ -370,7 +370,7 @@ Rollback restores the container image and its configuration together. It does no
 1. Open the revisions page for the service and identify the last revision that was healthy.
 2. Select roll back on that revision. Traffic moves within roughly thirty seconds and no rebuild takes place.
 3. If the release included a database migration, roll the migration back before the service, or the older code will encounter a schema it does not expect.
-4. Record the incident and the reason for the rollback before deploying a fix, while the detail is still fresh.",,,,
+4. Record the incident and the reason for the rollback before deploying a fix, while the detail is still fresh.",no,all,yes,
 27,VAL-0072,billing_query,"Invoice higher than expected
 There are charges on our invoice for a service I do not believe we use. Could you explain what these relate to?","Charges may appear for a service that is not in use if a resource was left running in a non-production environment [DOC-BILL-001#common-causes]. You can check the usage breakdown for the period to see if this is the case [DOC-BILL-001#resolution].
 
@@ -385,7 +385,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Open the usage breakdown for the period, which itemises charges by service and by environment.
 2. Look for resources in staging or development environments, which are billed at the same rate as production.
 3. Check the billing period dates at the top of the invoice. The period runs from the anniversary of the subscription date.
-4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",,,,
+4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",no,all,yes,
 28,VAL-0023,onboarding,"Migrating our app across
 We have just signed up and I am not sure where to start. We have a containerised application and would like to get it deployed.","To deploy your containerized application, first create a project and then a service within it. Connect a repository or push a container image to the build service. Set any environment variables the application needs before the first deployment. Deploy and watch the logs for the first sixty seconds for any startup output issues. [DOC-ONB-001#resolution] [DOC-ONB-002#common-causes]
 
@@ -399,7 +399,7 @@ If this does not solve the problem, reply to this message and a support engineer
 
 [DOC-ONB-002#common-causes] Migrating an existing application to CloudServe — Common causes
 - Configuration is embedded in the application rather than externalised
-- The application depends on local state that will not survive scaling",,,,
+- The application depends on local state that will not survive scaling",no,all,yes,
 29,VAL-0071,quota_or_overage,"Spend cap stopped our service
 We were throttled over the weekend after a traffic increase and it took down part of our product. We would rather pay overage than be stopped. How do we change that?","To avoid being stopped by a spend cap, you can configure overage instead. To do this, you'll need to decide between a hard spend cap, which stops the service, and overage, which continues at the listed rate. Production workloads generally need overage. You can configure alerts at fifty, eighty and ninety-five per cent of allowance rather than relying on the cap as a warning. [DOC-BILL-003#resolution] [DOC-BILL-003#common-causes]
 
@@ -414,13 +414,13 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the current period usage against the plan allowance on the billing page.
 2. Decide deliberately between a hard spend cap, which stops the service, and overage, which continues at the listed rate. Production workloads generally need the second.
 3. Configure alerts at fifty, eighty and ninety-five per cent of allowance rather than relying on the cap as a warning.
-4. Where a cap has stopped a production service, an account owner can raise it immediately from the billing page and service resumes within a minute.",,,,
+4. Where a cap has stopped a production service, an account owner can raise it immediately from the billing page and service resumes within a minute.",no,all,yes,
 30,VAL-0005,api_usage_question,Our cursor seems to stop working partway through a long iteration. Is there an expiry we should be handling?,"Yes, cursors expire after one hour. You should handle this by restarting from a recorded checkpoint. [DOC-API-002#notes]
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
 Sources: Pagination and handling large result sets (DOC-API-002).
 If this does not solve the problem, reply to this message and a support engineer will pick it up.","[DOC-API-002#notes] Pagination and handling large result sets — Notes
-Cursors expire after one hour. Long-running iterations should handle expiry by restarting from a recorded checkpoint.",,,,
+Cursors expire after one hour. Long-running iterations should handle expiry by restarting from a recorded checkpoint.",no,all,yes,
 31,VAL-0061,webhook_issue,"Webhooks not arriving
 Signature verification fails for every delivery. We are computing the signature exactly as the documentation describes, over the parsed body.","We recommend checking the webhook delivery log, which records every attempt with the response status and body for the last seven days. Also, please ensure that you are computing the signature over the raw request body before any parsing, as re-serialising JSON changes the bytes and invalidates the signature. [DOC-API-003#resolution] [DOC-API-003#resolution]
 
@@ -430,7 +430,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the webhook delivery log, which records every attempt with the response status and body for the last seven days.
 2. Return 2xx as quickly as possible and process the event asynchronously. Deliveries time out after five seconds.
 3. Compute the signature over the raw request body before any parsing. Re-serialising JSON changes the bytes and invalidates the signature.
-4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",,,,
+4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",yes,all,no,Extrapolates failure state beyond cited excerpt
 32,VAL-0080,deployment_failure,Builds that worked last week are now failing during dependency resolution. We have not changed our code at all. This is blocking a release we had planned for yesterday morning.,"Build failures caused by dependency resolution are often due to unpinned dependencies releasing new incompatible versions. To resolve this, please pin your dependencies with exact versions and commit the lock file. [DOC-DEPLOY-003#common-causes] [DOC-DEPLOY-003#resolution] If the issue persists, please check whether the dependency registry is reachable from the build network. [DOC-DEPLOY-003#resolution]
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -444,7 +444,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Pin your dependencies with exact versions and commit the lock file. Unpinned dependencies are the cause in the large majority of cases of this kind.
 2. Compare the runtime version declared in your build configuration against the version you use locally.
 3. Clear the build cache from the settings page and trigger a fresh build to rule out a corrupted artefact.
-4. If a specific dependency is failing to resolve, check whether its registry is reachable from the build network.",,,,
+4. If a specific dependency is failing to resolve, check whether its registry is reachable from the build network.",no,all,yes,
 33,VAL-0059,configuration_help,"Config differs between environments
 Where should secrets be stored so they do not appear in the logs? At the moment ours are being printed at startup and I am not comfortable with that.","Secrets should be stored as secrets rather than variables. This will mask them in logs and prevent them from being readable through the API after creation. [DOC-DEPLOY-004#resolution] If you have already printed a secret to logs, it should be treated as exposed and rotated, even if the logs are private. [DOC-DEPLOY-004#notes]
 
@@ -457,7 +457,7 @@ A secret that has been printed to logs should be treated as exposed and rotated,
 1. Check the scope at which the variable was defined. Service scope overrides project scope, and project scope overrides organisation defaults.
 2. Store anything sensitive as a secret rather than a variable. Secrets are masked in logs and are not readable through the API after creation.
 3. Review the environment overrides page, which lists values that differ from the defaults for each environment.
-4. Redeploy after changing configuration. Running containers do not pick up new values without a restart.",,,,
+4. Redeploy after changing configuration. Running containers do not pick up new values without a restart.",no,all,yes,
 34,VAL-0013,billing_query,"Question about this month's charges
 There are charges on our invoice for a service I do not believe we use. Could you explain what these relate to?","Charges for a service not in use may be due to usage-based charges accrued beyond the plan allowance [DOC-BILL-001#common-causes] or a resource being left running in a non-production environment [DOC-BILL-001#common-causes]. To investigate, please open the usage breakdown for the period and check for resources in staging or development environments, which are billed at the same rate as production [DOC-BILL-001#resolution].
 
@@ -472,7 +472,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Open the usage breakdown for the period, which itemises charges by service and by environment.
 2. Look for resources in staging or development environments, which are billed at the same rate as production.
 3. Check the billing period dates at the top of the invoice. The period runs from the anniversary of the subscription date.
-4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",,,,
+4. Set a usage alert on the billing page so that unexpected accrual is noticed during the period rather than at the end of it.",no,all,yes,
 35,VAL-0016,performance_degradation,The service is noticeably slow during our afternoon peak and fine the rest of the day. We have autoscaling enabled so I expected it to cope.,"We recommend checking the metrics page to compare median and 95th percentile latency. A large gap may indicate contention or queueing rather than a uniformly slower service [DOC-PERF-001#resolution]. Additionally, review the dependency timing breakdown on the trace view to identify whether the time is being spent in your service or waiting on another [DOC-PERF-001#resolution].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -486,7 +486,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Compare median and 95th percentile latency on the metrics page. A large gap points to contention or queueing rather than a uniformly slower service.
 2. Check memory utilisation across instances. Sustained utilisation above eighty per cent typically shows up as latency before it shows up as failure.
 3. Review the dependency timing breakdown on the trace view to identify whether the time is being spent in your service or waiting on another.
-4. Adjust the autoscaling policy if load is predictable. Scaling on request count responds sooner than scaling on processor utilisation.",,,,
+4. Adjust the autoscaling policy if load is predictable. Scaling on request count responds sooner than scaling on processor utilisation.",no,all,yes,
 36,VAL-0070,sso_configuration,"SSO works for some users only
 Single sign-on works for our engineering group but the finance group gets an error. Both are configured identically as far as we can tell. Any idea what differs?","We recommend comparing the assertion consumer service URL in your identity provider against the value shown on the SSO settings page for both the engineering and finance groups. They must match exactly, including the trailing path [DOC-AUTH-003#resolution]. Additionally, inspect a failing assertion for the finance group and confirm the NameID is the user's email address in lower case [DOC-AUTH-003#resolution].
 
@@ -496,7 +496,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Compare the assertion consumer service URL in your identity provider against the value shown on the SSO settings page. They must match exactly, including the trailing path.
 2. Inspect a failing assertion and confirm the NameID is the user's email address in lower case.
 3. Enable just-in-time provisioning if new users should be created on first login, and set a default role for provisioned users.
-4. Keep at least one administrator account with password access while testing, so a misconfiguration does not lock the whole organisation out.",,,,
+4. Keep at least one administrator account with password access while testing, so a misconfiguration does not lock the whole organisation out.",no,all,yes,
 37,VAL-0064,api_usage_question,What is the right way to pull a very large extract? Requesting a big page size gets rejected and iterating page by page takes hours.,"For very large extracts, use the export endpoint, which runs asynchronously and returns a download link [DOC-API-002#resolution]. The export captured a snapshot taken when the job started [DOC-DATA-001#common-causes].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -510,7 +510,7 @@ If this does not solve the problem, reply to this message and a support engineer
 [DOC-DATA-001#common-causes] Exporting account data and scheduled extracts — Common causes
 - Large exports are queued and processed asynchronously
 - Download links are valid for twenty-four hours
-- The export captured a snapshot taken when the job started",,,,
+- The export captured a snapshot taken when the job started",no,all,yes,
 38,VAL-0026,data_residency,"Need data to stay in the EU
 we need our data to remain within EU for contract we are signing. Our organisation created some time ago and i not sure which region it is in. please do the needful.","To determine the region where your primary data is stored, please check the organisation settings page. This is fixed at creation and determines where primary data is stored. [DOC-DATA-003#resolution] If you need to change the region, please contact support for a planned migration with a maintenance window. [DOC-DATA-003#resolution] Additionally, you can enable read replicas in additional regions, such as the EU, to reduce latency for distant users without moving primary storage. [DOC-DATA-003#resolution]
 
@@ -520,7 +520,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the region shown on the organisation settings page. This is fixed at creation and determines where primary data is stored.
 2. Enable read replicas in additional regions to reduce latency for distant users without moving primary storage.
 3. Review the backup replication setting if a single-region requirement applies, since cross-region replication is enabled by default.
-4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",,,,
+4. Migrating an organisation between regions requires a planned migration with support and involves a maintenance window.",no,all,yes,
 39,VAL-0036,onboarding,"Getting started with first deployment
 Could you point me at the right starting place? I have created an account but the console has more in it than I expected.","To get started with your first deployment, we recommend following the steps outlined in our documentation. First, create a project, then a service within it. This will help you understand how resources are organized on our platform. You can find more information in our documentation on 'First deployment: a walkthrough' [DOC-ONB-001#resolution].
 
@@ -530,7 +530,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Create a project, then a service within it. Resources belong to services and services belong to projects.
 2. Connect a repository or push a container image. The build service detects common project layouts automatically.
 3. Set any environment variables the application needs before the first deployment rather than after it.
-4. Deploy, then watch the logs for the first sixty seconds. Most first-deployment problems are visible immediately in startup output.",,,,
+4. Deploy, then watch the logs for the first sixty seconds. Most first-deployment problems are visible immediately in startup output.",no,all,yes,
 40,VAL-0054,data_residency,"Where is our data stored
 One of our customers has asked for written confirmation of where their data is physically stored. Could you point me to something I can share with them?","Data is stored in the region shown on the organisation settings page, which is fixed at creation and determines where primary data is stored. Metadata such as account names and billing records is stored centrally regardless of the data region. [DOC-DATA-003#symptoms] [DOC-DATA-003#notes] [DOC-DATA-003#resolution]
 
@@ -548,7 +548,7 @@ Metadata such as account names and billing records is stored centrally regardles
 [DOC-DATA-003#symptoms] Data residency and regional storage — Symptoms
 - A customer requires data to remain in a specific region
 - Latency is high for users far from the primary region
-- A compliance review has asked where data is held",,,,
+- A compliance review has asked where data is held",no,all,yes,
 41,VAL-0031,rollback_request,"Bad release in production
 We shipped a release yesterday morning that has broken checkout for a portion of our customers. We need to get back to the previous version quickly. What is the fastest safe route?","To roll back to the previous version, open the revisions page for the service and identify the last revision that was healthy. Select roll back on that revision. Traffic moves within roughly thirty seconds and no rebuild takes place. If the release included a database migration, roll the migration back before the service, or the older code will encounter a schema it does not expect. [DOC-DEPLOY-002#resolution] [DOC-DEPLOY-002#resolution] [DOC-DEPLOY-002#resolution] [DOC-DEPLOY-002#resolution]
 
@@ -558,7 +558,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Open the revisions page for the service and identify the last revision that was healthy.
 2. Select roll back on that revision. Traffic moves within roughly thirty seconds and no rebuild takes place.
 3. If the release included a database migration, roll the migration back before the service, or the older code will encounter a schema it does not expect.
-4. Record the incident and the reason for the rollback before deploying a fix, while the detail is still fresh.",,,,
+4. Record the incident and the reason for the rollback before deploying a fix, while the detail is still fresh.",no,all,yes,
 42,VAL-0052,authentication_failure,"Since late last night I cannot get into the console at all. My colleague on the same team signs in without any trouble, so it does not appear to be a general outage. Could you check whether something is wrong with my account specifically?","Repeated lockouts within a short period usually indicate an automated process still using an old password rather than a user error. To troubleshoot, we recommend checking the security page of the console for a locked account, which displays a red banner and unlocks automatically after thirty minutes. [DOC-AUTH-001#notes] [DOC-AUTH-001#resolution] If the account is locked, an administrator on the account can release the lock from the team members page. [DOC-AUTH-001#resolution]
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -570,7 +570,7 @@ Repeated lockouts within a short period usually indicate an automated process st
 1. Confirm whether the account is locked by checking the security page of the console. A locked account displays a red banner and unlocks automatically after thirty minutes.
 2. Clear cookies for the CloudServe domain, or open a private browsing window, then attempt the login again.
 3. If the CLI is failing, run `cloudserve auth logout` followed by `cloudserve auth login` to discard the cached token.
-4. Where the account remains locked and the customer needs immediate access, an administrator on the account can release the lock from the team members page.",,,,
+4. Where the account remains locked and the customer needs immediate access, an administrator on the account can release the lock from the team members page.",no,all,yes,
 43,VAL-0038,performance_degradation,"p95 latency is very high
 Our response times have roughly doubled since two days ago with no deployment on our side. The median looks acceptable but the 95th percentile is far worse than it was.","We've seen that a large gap between the median and 95th percentile latency can indicate contention or queueing rather than a uniformly slower service [DOC-PERF-001#resolution]. We recommend checking memory utilisation across instances to see if sustained utilisation above eighty per cent is causing the latency [DOC-PERF-001#resolution].
 
@@ -580,7 +580,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Compare median and 95th percentile latency on the metrics page. A large gap points to contention or queueing rather than a uniformly slower service.
 2. Check memory utilisation across instances. Sustained utilisation above eighty per cent typically shows up as latency before it shows up as failure.
 3. Review the dependency timing breakdown on the trace view to identify whether the time is being spent in your service or waiting on another.
-4. Adjust the autoscaling policy if load is predictable. Scaling on request count responds sooner than scaling on processor utilisation.",,,,
+4. Adjust the autoscaling policy if load is predictable. Scaling on request count responds sooner than scaling on processor utilisation.",no,all,yes,
 44,VAL-0006,authentication_failure,"MFA code keeps getting rejected
 I have been trying to sign in for the last two hours and keep getting an invalid credentials message. I am certain the password is correct because I use a password manager. Nothing has changed at our end that I am aware of.","We recommend checking that automatic time synchronisation is enabled on the device generating the code, as device clock drift is the most common cause of invalid time-based codes [DOC-AUTH-002#resolution].
 
@@ -590,7 +590,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Ask the user to check that automatic time synchronisation is enabled on the device generating the code. Drift is the most common cause by a wide margin.
 2. If the device is lost, the user should sign in with one of their recovery codes and then re-enrol a new device from the security page.
 3. Where no recovery codes are available, an account administrator can reset multi-factor authentication for that user from the team members page.
-4. If the user is the sole administrator and has no recovery codes, identity verification through support is required and takes up to one business day.",,,,
+4. If the user is the sole administrator and has no recovery codes, identity verification through support is required and takes up to one business day.",no,all,yes,Acceptable paraphrase of resolution steps
 45,VAL-0060,webhook_issue,"Webhooks not arriving
 Signature verification fails for every delivery. We are computing the signature exactly as the documentation describes, over the parsed body.","We recommend checking the webhook delivery log, which records every attempt with the response status and body for the last seven days. Also, please ensure that you are computing the signature over the raw request body before any parsing, as re-serialising JSON changes the bytes and invalidates the signature. [DOC-API-003#resolution] [DOC-API-003#resolution]
 
@@ -600,7 +600,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Check the webhook delivery log, which records every attempt with the response status and body for the last seven days.
 2. Return 2xx as quickly as possible and process the event asynchronously. Deliveries time out after five seconds.
 3. Compute the signature over the raw request body before any parsing. Re-serialising JSON changes the bytes and invalidates the signature.
-4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",,,,
+4. Make your handler idempotent using the event identifier. At-least-once delivery means duplicates are expected rather than exceptional.",no,all,yes,
 46,VAL-0063,account_access,"Permission changes not taking effect
 One of our developers cannot see a project she should have access to. I have granted her the role twice and it does not seem to take effect.","Please check if the role was granted at project scope or organisation scope. If it was granted at project scope, the user may not have access to the project. [DOC-ACCT-001#common-causes] [DOC-ACCT-001#common-causes]
 
@@ -609,7 +609,7 @@ Sources: Managing team members, roles and permissions (DOC-ACCT-001).
 If this does not solve the problem, reply to this message and a support engineer will pick it up.","[DOC-ACCT-001#common-causes] Managing team members, roles and permissions — Common causes
 - The role was granted at project scope rather than organisation scope
 - The invitation was never accepted and the account does not exist
-- A group membership grants broader access than the direct role suggests",,,,
+- A group membership grants broader access than the direct role suggests",no,all,yes,
 47,VAL-0047,rate_limit,Are the search endpoints limited differently from the rest? Our read traffic is fine but search is being rejected constantly.,"We do not have specific information about the search endpoints being limited differently from the rest. However, we do know that requests return 429 Too Many Requests when the rate limit is exceeded [DOC-API-001#symptoms]. If you are experiencing issues with search being rejected constantly, it's possible that the throughput has dropped sharply at a predictable point [DOC-API-001#symptoms].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -617,7 +617,7 @@ Sources: Understanding API rate limits and quota tiers (DOC-API-001).
 If this does not solve the problem, reply to this message and a support engineer will pick it up.","[DOC-API-001#symptoms] Understanding API rate limits and quota tiers — Symptoms
 - Requests return 429 Too Many Requests
 - Throughput drops sharply at a predictable point
-- Limits appear lower than the documented figure",,,,
+- Limits appear lower than the documented figure",no,all,yes,
 48,VAL-0055,integration_help,we connecting our CI pipeline and not are sure whether to use personal key or something else. What is recommended approach for automation? please tell what to do.,"We recommend creating a service account for the pipeline rather than using a personal key, so that access survives staff changes [DOC-INT-001#resolution]. This will also help you grant the service account only the projects and permissions the pipeline needs, and review that grant when the pipeline changes [DOC-INT-001#resolution]. Additionally, store the credential as an encrypted secret in your pipeline provider, never in the repository [DOC-INT-001#resolution].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -626,7 +626,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Create a service account for the pipeline rather than using a personal key, so that access survives staff changes.
 2. Grant the service account only the projects and permissions the pipeline needs, and review that grant when the pipeline changes.
 3. Store the credential as an encrypted secret in your pipeline provider, never in the repository.
-4. Test the pipeline credential separately from the deployment logic, so that authentication failures are distinguishable from deployment failures.",,,,
+4. Test the pipeline credential separately from the deployment logic, so that authentication failures are distinguishable from deployment failures.",no,all,yes,
 49,VAL-0004,authentication_failure,"MFA code keeps getting rejected
 my authenticator app codes are being rejected every time. i am having tried generating new ones several times.","We recommend checking that automatic time synchronisation is enabled on the device generating the code, as device clock drift of more than thirty seconds can invalidate time-based codes [DOC-AUTH-002#common-causes]. If you've tried generating new codes and are still experiencing issues, please sign in with one of your recovery codes and then re-enrol a new device from the security page [DOC-AUTH-002#resolution].
 
@@ -641,7 +641,7 @@ If this does not solve the problem, reply to this message and a support engineer
 1. Ask the user to check that automatic time synchronisation is enabled on the device generating the code. Drift is the most common cause by a wide margin.
 2. If the device is lost, the user should sign in with one of their recovery codes and then re-enrol a new device from the security page.
 3. Where no recovery codes are available, an account administrator can reset multi-factor authentication for that user from the team members page.
-4. If the user is the sole administrator and has no recovery codes, identity verification through support is required and takes up to one business day.",,,,
+4. If the user is the sole administrator and has no recovery codes, identity verification through support is required and takes up to one business day.",no,all,yes,
 50,VAL-0069,configuration_help,Our staging environment is picking up production configuration values. I cannot work out where the override is coming from.,"It's possible that the variable was set at project scope but read at service scope [DOC-DEPLOY-004#common-causes]. You can also check if an environment override exists that is not visible on the main settings page [DOC-DEPLOY-004#common-causes].
 
 This reply was drafted by an automated assistant using CloudServe's help articles.
@@ -649,4 +649,4 @@ Sources: Configuring environment variables and secrets (DOC-DEPLOY-004).
 If this does not solve the problem, reply to this message and a support engineer will pick it up.","[DOC-DEPLOY-004#common-causes] Configuring environment variables and secrets — Common causes
 - The variable was set at project scope but read at service scope
 - The application logs its configuration at startup
-- An environment override exists that is not visible on the main settings page",,,,
+- An environment override exists that is not visible on the main settings page",no,all,yes,
