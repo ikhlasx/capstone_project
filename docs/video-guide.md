@@ -20,7 +20,7 @@ anything before recording, read the new numbers off the screen rather than this 
 | 2. Discovery | Problem statement | `discovery/problem_statement.md` |
 | 3. Architecture | The seven-step diagram | `README.md`, section "How a ticket moves through the system" |
 | 3. Architecture | The routing rules in order | `src/route.py`, the docstring at the top |
-| 4.1 Tests | Full test run | `python -m pytest tests/ -v` (228 tests, about 25–30 s) |
+| 4.1 Tests | Full test run | `python -m pytest tests/ -v` (230 tests, about 30 s) |
 | 4.2 Grounded answer | One ticket, step by step | `python -m scripts.demo ticket "my deployment keeps dying at the container health check phase"` |
 | 4.3 Escalation | Protected ticket and its packet | `python -m scripts.demo ticket "Our auditor requires access logs covering the last six months for our annual compliance review." --subject "Audit documentation request" --channel email --id DEMO-02` |
 | 4.4 Guardrails | Real checks blocking bad drafts | `python -m scripts.demo guardrail` |
@@ -31,6 +31,7 @@ anything before recording, read the new numbers off the screen rather than this 
 | 5. Numbers | The report | `evaluation/results/validation/metrics.md` |
 | 6. Fairness | Fairness tables | the "Fairness" section of the same file |
 | 6. Failure testing | The failure table | `docs/failure-handling.md` |
+| 6. Governance | Risk register, kill switch | `docs/governance.md`; `python -m scripts.kill_switch on test`, run one ticket, `off` |
 | 6. CI (optional) | Green CI run | https://github.com/ikhlasx/capstone_project/actions |
 | 7. What I got wrong | Assumptions and revisions | `docs/PRD.md` section 7, and your Stage 5 revision log |
 
@@ -92,7 +93,7 @@ A cold run takes several minutes, so if you are short of time, start it and cut 
 - 254 tickets fall into 97 groups with identical subject and body. In 67 of those groups (186 tickets) the urgency labels disagree. 36 groups disagree on "answerable", 30 on the expected route.
 
 **Other**
-- Tests: 228 passing. Failure-injection: 25 tests. CI: green on GitHub.
+- Tests: 230 passing. Failure-injection: 25 tests. CI: green on GitHub.
 - Chunks: 116. Thresholds: confidence 0.80, relevance 0.40.
 
 ## Corrections to the video script

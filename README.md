@@ -89,6 +89,26 @@ A ticket is escalated when it is empty, when its intent is protected (security, 
 feature request, unclear), when the classifier is not confident, when it disputes a charge, when
 no passage is relevant enough, when drafting fails, or when a guardrail blocks the draft.
 
+## Stopping automated replies (kill switch)
+
+```bash
+python -m scripts.kill_switch on "reason"     # nothing is auto-answered from the next ticket
+python -m scripts.kill_switch status
+python -m scripts.kill_switch off
+```
+
+Tickets are still classified, searched, escalated and logged while the switch is on. See
+`docs/governance.md` for the incident procedure.
+
+## Human review of answers
+
+```bash
+python -m evaluation.human_review.make_review_sheets --results evaluation/results/validation/results.jsonl --tickets data/validation_tickets.json
+python -m evaluation.human_review.score_review --a evaluation/human_review/reviewer_A.csv --b evaluation/human_review/reviewer_B.csv
+```
+
+Two reviewers fill in their sheets independently, following `evaluation/human_review/RUBRIC.md`.
+
 ## Other commands
 
 ```bash
@@ -98,6 +118,7 @@ python -m scripts.smoke_llm                  # one live model call
 python -m evaluation.retrieval_sweep --input data/development_tickets.json
 python -m evaluation.threshold_sweep --input data/development_tickets.json
 python discovery/analysis.py --data data --out discovery/evidence.md
+python -m scripts.demo ticket "my deployment keeps dying"   # readable walkthrough of one ticket
 ```
 
 The two sweeps run on development data only and refuse any other set.
@@ -109,7 +130,7 @@ src/          the pipeline
 prompts/      versioned prompts and the prompt register
 evaluation/   harness, metrics, threshold sweeps, results
 discovery/    evidence analysis and problem statement
-docs/         PRD and setup notes
+docs/         PRD, architecture, governance, failure handling, report outline
 tests/        python -m pytest tests/ -v
 data/         course datasets
 storage/      runtime files (index, model, cache, logs); never committed
