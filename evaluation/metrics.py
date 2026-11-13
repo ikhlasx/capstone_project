@@ -14,7 +14,16 @@ from src.models import Ticket
 from src.pipeline import TicketResult
 
 FAIRNESS_GAP_POINTS = 5.0
-GROUP_FIELDS = {"tier": "customer_tier", "region": "customer_region", "fluency": "language_fluency"}
+SHORT_TICKET_WORDS = 28   # the median ticket length (subject + body) in the development set
+
+
+def length_band(t: Ticket) -> str:
+    words = len(t.text.split())
+    return f"short (<= {SHORT_TICKET_WORDS} words)" if words <= SHORT_TICKET_WORDS else f"long (> {SHORT_TICKET_WORDS} words)"
+
+
+GROUP_FIELDS = {"tier": "customer_tier", "region": "customer_region", "fluency": "language_fluency",
+                "length": length_band, "channel": lambda t: t.channel.value}
 
 
 def pct(a: float, b: float) -> float | None:
@@ -66,7 +75,7 @@ def fairness(rows: list[tuple[Ticket, TicketResult]]) -> dict[str, Any]:
     for name, field in GROUP_FIELDS.items():
         groups = defaultdict(list)
         for t, r in rows:
-            groups[getattr(t, field)].append((t, r))
+            groups[field(t) if callable(field) else getattr(t, field)].append((t, r))
         table = {g: group_metrics(v) for g, v in sorted(groups.items())}
         gaps = {}
         for metric in ("auto_rate", "route_agreement", "retrieval_hit_rate", "guardrail_block_rate"):

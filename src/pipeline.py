@@ -99,13 +99,20 @@ def emergency_escalation(ticket: Ticket, exc: Exception) -> TicketResult:
 
 class Pipeline:
     def __init__(self, classifier: TicketClassifier, retriever: Retriever, generator: Generator | None,
-                 log: DecisionLog, routing: RoutingConfig = RoutingConfig(), top_k: int = 5):
+                 log: DecisionLog, routing: RoutingConfig = RoutingConfig(), top_k: int = 5,
+                 kill_switch_file: str | Path | None = None):
         self.classifier = classifier
         self.retriever = retriever
         self.generator = generator          # None when no API key is configured
         self.log = log
         self.routing = routing
         self.top_k = top_k
+        self.kill_switch_file = Path(kill_switch_file) if kill_switch_file else None
+
+    def kill_switch_active(self) -> bool:
+        """Checked on every ticket, so creating the file stops auto-answers from the next ticket on,
+        with no restart or deployment."""
+        return bool(self.kill_switch_file and self.kill_switch_file.exists())
 
     # --- helpers ---------------------------------------------------------------------------
 
@@ -173,6 +180,11 @@ class Pipeline:
             if decision.action == "escalate" and decision.rule == "no_relevant_passage" and errors:
                 decision = decision.model_copy(update={"rule": "retrieval_unavailable",
                                                        "reason": "Document search failed, so no answer can be grounded."})
+            if decision.action == "generate" and self.kill_switch_active():
+                decision = decision.model_copy(update={
+                    "action": "escalate", "rule": "kill_switch",
+                    "reason": "Automated replies are switched off (kill switch active); a person must reply.",
+                    "requirement_ids": ("FR-05", "NFR-02")})
         relevant = [p for p in passages if p.score >= self.routing.relevance_threshold]
         self.log.log(DecisionRecord(
             ticket_id=ticket.ticket_id, stage="routing", input_summary=summary, model=RULES_MODEL,
@@ -277,4 +289,4 @@ def build_pipeline(settings: Settings, database_url: str, run_id: str | None = N
     return Pipeline(classifier, retriever, generator, DecisionLog(database_url, run_id=run_id),
                     RoutingConfig(confidence_threshold=settings.confidence_threshold,
                                   relevance_threshold=settings.relevance_threshold),
-                    top_k=settings.retrieval_top_k)
+                    top_k=settings.retrieval_top_k, kill_switch_file=settings.kill_switch_file)

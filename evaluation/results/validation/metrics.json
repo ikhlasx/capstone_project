@@ -2,9 +2,9 @@
   "meta": {
     "label": "validation",
     "input": "data/validation_tickets.json",
-    "run_id": "0f785d3859aa",
-    "started_at": "2026-11-12T04:17:19+00:00",
-    "wall_seconds": 238.7,
+    "run_id": "6dd0caaf54ce",
+    "started_at": "2026-11-13T05:27:58+00:00",
+    "wall_seconds": 4.7,
     "confidence_threshold": 0.8,
     "relevance_threshold": 0.4,
     "provider": "openrouter",
@@ -29,8 +29,8 @@
     "first_contact_resolution": 77.5,
     "escalation_rate": 22.5,
     "system_response_seconds": {
-      "mean": 2.98,
-      "median": 0.88
+      "mean": 0.06,
+      "median": 0.06
     },
     "history_baseline": {
       "tickets_with_history": 80,
@@ -41,12 +41,12 @@
   },
   "technical": {
     "latency_ms": {
-      "triage_p50": 45.7,
-      "triage_p95": 57.2,
-      "total_p50": 884.3,
-      "total_p95": 10954.2
+      "triage_p50": 43.7,
+      "triage_p95": 49.1,
+      "total_p50": 60.8,
+      "total_p95": 67.8
     },
-    "cached_generations": 6,
+    "cached_generations": 64,
     "intent_accuracy": 100.0,
     "intent_macro_precision": 100.0,
     "intent_per_class": {
@@ -349,6 +349,92 @@
         "guardrail_block_rate": {
           "gap_points": 3.7,
           "flag": false
+        }
+      }
+    },
+    "length": {
+      "groups": {
+        "long (> 28 words)": {
+          "n": 34,
+          "auto_rate": 91.2,
+          "route_agreement": 73.5,
+          "retrieval_hit_rate": 96.2,
+          "guardrail_block_rate": 0.0
+        },
+        "short (<= 28 words)": {
+          "n": 46,
+          "auto_rate": 67.4,
+          "route_agreement": 76.1,
+          "retrieval_hit_rate": 96.3,
+          "guardrail_block_rate": 4.3
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 23.8,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 2.6,
+          "flag": false
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 0.1,
+          "flag": false
+        },
+        "guardrail_block_rate": {
+          "gap_points": 4.3,
+          "flag": false
+        }
+      }
+    },
+    "channel": {
+      "groups": {
+        "chat": {
+          "n": 22,
+          "auto_rate": 68.2,
+          "route_agreement": 81.8,
+          "retrieval_hit_rate": 84.6,
+          "guardrail_block_rate": 0.0
+        },
+        "docs_comment": {
+          "n": 16,
+          "auto_rate": 68.8,
+          "route_agreement": 68.8,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 6.2
+        },
+        "email": {
+          "n": 31,
+          "auto_rate": 87.1,
+          "route_agreement": 74.2,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 3.2
+        },
+        "forum": {
+          "n": 11,
+          "auto_rate": 81.8,
+          "route_agreement": 72.7,
+          "retrieval_hit_rate": 100.0,
+          "guardrail_block_rate": 0.0
+        }
+      },
+      "gaps": {
+        "auto_rate": {
+          "gap_points": 18.9,
+          "flag": true
+        },
+        "route_agreement": {
+          "gap_points": 13.0,
+          "flag": true
+        },
+        "retrieval_hit_rate": {
+          "gap_points": 15.4,
+          "flag": true
+        },
+        "guardrail_block_rate": {
+          "gap_points": 6.2,
+          "flag": true
         }
       }
     }

@@ -1,7 +1,7 @@
 # Metrics report: validation
 
 - Input: `data/validation_tickets.json` (80 tickets processed, 0 unreadable records)
-- Run: `0f785d3859aa` at 2026-11-12T04:17:19+00:00 · provider: openrouter · model: `meta-llama/llama-3.1-8b-instruct`
+- Run: `6dd0caaf54ce` at 2026-11-13T05:27:58+00:00 · provider: openrouter · model: `meta-llama/llama-3.1-8b-instruct`
 - Thresholds: intent confidence 0.8, retrieval relevance 0.4
 - **These are validation figures.** Thresholds were set on development data only.
 
@@ -19,14 +19,14 @@ Reason each ticket ended where it did: `answerable` 62, `protected_intent` 14, `
 |---|---|---|
 | First-contact resolution (auto-answered ÷ all) | 77.5% | 46.2% |
 | Escalation rate | 22.5% | 53.8% |
-| Response time | median 0.88 s, mean 2.98 s (system processing time) | median 218.0 min (time to resolve) |
+| Response time | median 0.06 s, mean 0.06 s (system processing time) | median 218.0 min (time to resolve) |
 
 The system figure counts a ticket as resolved when an answer was sent. Whether the customer's problem was actually solved is not observable here.
 
 ## Technical performance
 
-- Latency, triage only (classify + search + route): p50 45.7 ms, p95 57.2 ms
-- Latency, end to end (including answer drafting): p50 884.3 ms, p95 10954.2 ms (6 drafts came from cache)
+- Latency, triage only (classify + search + route): p50 43.7 ms, p95 49.1 ms
+- Latency, end to end (including answer drafting): p50 60.8 ms, p95 67.8 ms (64 drafts came from cache)
 - Intent: accuracy 100.0%, macro precision 100.0%
 - Urgency: accuracy 43.8%
 - Calibration: mean stated intent confidence 97.9% vs accuracy 100.0% (gap 2.1 points; condition: within 5)
@@ -118,6 +118,26 @@ Gaps over the limit: auto rate (23.9 points), route agreement (19.0 points), ret
 | non_fluent | 19 | 78.9% | 52.6% | 100.0% | 5.3% |
 
 Gaps over the limit: route agreement (29.4 points)
+
+### By length
+
+| Group | Tickets | Auto-answered | Routing agreement | Retrieval hit rate | Guardrail blocks |
+|---|---|---|---|---|---|
+| long (> 28 words) | 34 | 91.2% | 73.5% | 96.2% | 0.0% |
+| short (<= 28 words) | 46 | 67.4% | 76.1% | 96.3% | 4.3% |
+
+Gaps over the limit: auto rate (23.8 points)
+
+### By channel
+
+| Group | Tickets | Auto-answered | Routing agreement | Retrieval hit rate | Guardrail blocks |
+|---|---|---|---|---|---|
+| chat | 22 | 68.2% | 81.8% | 84.6% | 0.0% |
+| docs_comment | 16 | 68.8% | 68.8% | 100.0% | 6.2% |
+| email | 31 | 87.1% | 74.2% | 100.0% | 3.2% |
+| forum | 11 | 81.8% | 72.7% | 100.0% | 0.0% |
+
+Gaps over the limit: auto rate (18.9 points), route agreement (13.0 points), retrieval hit rate (15.4 points), guardrail block rate (6.2 points)
 
 ## Answer quality against expert reference answers
 

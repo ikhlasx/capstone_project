@@ -219,7 +219,7 @@ def test_report_covers_every_required_section(report):
     rep, out = report
     for key in ("volume", "business", "technical", "safety", "governance", "fairness", "answer_quality"):
         assert key in rep
-    assert set(rep["fairness"]) == {"tier", "region", "fluency"}
+    assert set(rep["fairness"]) == {"tier", "region", "fluency", "length", "channel"}
     assert rep["business"]["history_baseline"]["tickets_with_history"] == 80
     assert rep["technical"]["latency_ms"]["total_p95"] is not None
     assert rep["governance"]["auto_replies_with_disclosure"] == 100.0
@@ -255,3 +255,32 @@ def test_metrics_work_without_labels(classifier, retriever, tmp_path):
 def test_unreadable_input_exits_cleanly(tmp_path, capsys):
     assert main(["--input", str(tmp_path / "missing.json"), "--output", str(tmp_path / "out"), "--provider", "stub"]) == 2
     assert "Cannot read the input" in capsys.readouterr().out
+
+
+# --- kill switch ---------------------------------------------------------------------------
+
+def test_kill_switch_stops_auto_answers_without_a_restart(classifier, retriever, tmp_path, dev):
+    switch = tmp_path / "KILL_SWITCH"
+    p = Pipeline(classifier, retriever, Generator(StubProvider(), "test-model"),
+                 DecisionLog(str(tmp_path / "k.db"), run_id="k"), ROUTING, kill_switch_file=switch)
+    answerable = [t for t in dev if t.labels["intent"] == "rollback_request" and t.labels["expected_route"] == "auto_respond"][:3]
+    assert p.process(answerable[0]).action == "auto_respond"
+
+    switch.write_text("switched off for an incident")          # flip it while the pipeline is running
+    r = p.process(answerable[1])
+    assert (r.action, r.rule) == ("escalate", "kill_switch")
+    assert r.packet.retrieved and "kill switch" in r.packet.reason
+    rows = p.log.for_ticket(answerable[1].ticket_id)
+    assert [row["stage"] for row in rows] == ["classification", "routing"]
+    assert rows[-1]["prediction"]["rule"] == "kill_switch" and rows[-1]["action_taken"] == "escalate"
+
+    switch.unlink()                                             # and back on
+    assert p.process(answerable[2]).action == "auto_respond"
+
+
+def test_kill_switch_does_not_change_tickets_that_escalate_anyway(classifier, retriever, tmp_path, dev):
+    switch = tmp_path / "KILL_SWITCH"
+    switch.write_text("on")
+    p = Pipeline(classifier, retriever, Generator(StubProvider(), "test-model"),
+                 DecisionLog(str(tmp_path / "k2.db"), run_id="k2"), ROUTING, kill_switch_file=switch)
+    assert p.process(first(dev, intent="security_incident")).rule == "protected_intent"

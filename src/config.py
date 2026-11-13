@@ -44,6 +44,7 @@ class Settings:
     training_data: str
     docs_path: str
     cache_path: str
+    kill_switch_file: str
 
     @property
     def has_api_key(self) -> bool:
@@ -68,4 +69,6 @@ def get_settings() -> Settings:
         training_data=os.getenv("TRAINING_DATA", "data/development_tickets.json"),
         docs_path=os.getenv("DOCS_PATH", "data/documentation.json"),
         cache_path=os.getenv("CACHE_PATH", "./storage/llm_cache.sqlite"),
+        # Kill switch: while this file exists, nothing is auto-answered (checked on every ticket).
+        kill_switch_file=os.getenv("KILL_SWITCH_FILE", "./storage/KILL_SWITCH"),
     )
