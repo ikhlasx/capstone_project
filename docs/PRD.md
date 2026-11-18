@@ -1,10 +1,7 @@
 # CloudServe Support Triage — Product Requirements Document
 
-> **Draft v1.0, AI-assisted.** Claude drafted this from my discovery evidence, the course pack and
-> the build so far. I review, edit and own every requirement, priority, target and assumption, and
-> the AI assistance is listed in my AI-use declaration. Section 2 is copied from my discovery file.
-> References `E1`–`E11` point to `discovery/evidence.md`. I still need to map each one to its
-> Discovery Workbook section and row.
+> References `E1`–`E11` point to `discovery/evidence.md`. The completed version of this document is
+> the Stage 2 workbook; how AI tools were used is declared in the report.
 
 ## 1. Document control
 
