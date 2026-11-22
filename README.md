@@ -130,7 +130,7 @@ src/          the pipeline
 prompts/      versioned prompts and the prompt register
 evaluation/   harness, metrics, threshold sweeps, results
 discovery/    evidence analysis and problem statement
-docs/         PRD, architecture, governance, failure handling, report outline
+docs/         PRD, architecture, governance, failure handling, setup notes
 tests/        python -m pytest tests/ -v
 data/         course datasets
 storage/      runtime files (index, model, cache, logs); never committed

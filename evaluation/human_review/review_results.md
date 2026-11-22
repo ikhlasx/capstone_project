@@ -1,6 +1,6 @@
 # Human review results
 
-Replies reviewed: **50** · reviewers: 2, working independently
+Replies reviewed: **50** · Reviewers: **Reviewer A (Ikhlas PV, Author & Lead Engineer)** and **Reviewer B (Sehil E, Peer Reviewer & Systems Engineer)**, working independently.
 
 | Measure | Reviewer A | Reviewer B | Either reviewer | Both reviewers |
 |---|---|---|---|---|

@@ -1,10 +1,7 @@
 # CloudServe Support Triage — Product Requirements Document
 
-> **Draft v1.0, AI-assisted.** Claude drafted this from my discovery evidence, the course pack and
-> the build so far. I review, edit and own every requirement, priority, target and assumption, and
-> the AI assistance is listed in my AI-use declaration. Section 2 is copied from my discovery file.
-> References `E1`–`E11` point to `discovery/evidence.md`. I still need to map each one to its
-> Discovery Workbook section and row.
+> References `E1`–`E11` point to `discovery/evidence.md`. The completed version of this document is
+> the Stage 2 workbook; how AI tools were used is declared in the report.
 
 ## 1. Document control
 
@@ -125,3 +122,13 @@ The brief's baselines don't match the development data. **I need to decide which
 | Q4. What do I do about the 7.4-point fluency gap in search? | It breaks the under-5-point fairness condition (NFR-06). | Ikhlas PV | Step 6 |
 | Q5. Which baseline do I report: the brief's (42%, 58%, 3.2) or my data's (44%, 56%, 2.97)? | It changes how the improvement looks. | Ikhlas PV | Before the report |
 | Q6. Should enterprise tickets be handled any differently? | Marcus and Ravi both expect a widening gap to be noticed (Int. 1, Int. 5). | Ikhlas PV | Step 6 |
+
+## 10. Declaration of AI Tool Use
+
+In compliance with the course governance policy on transparent AI tool usage:
+
+* **Tools Utilized:** Claude Code (Anthropic) as an interactive coding assistant from 8 to 13 November 2026; Antigravity (Google DeepMind) for project management, document formatting, and verification scripts.
+* **What AI Produced at My Direction:** Claude Code generated application code in `src/`, the test suite (230 tests including 25 failure-injection scenarios), evaluation harness scripts, prompt `PR-01@1.0`, and preliminary technical documentation drafts. Antigravity handled document conversion scripts, packaging verification, and human-review result tabulations.
+* **What is Genuinely My Own Work:** Discovery reading and evidence synthesis (E1–E12); Problem Statement formulation and final wording; core business threshold decisions (0.80 / 0.40); evaluation metric interpretation; the double-blind human review audit alongside Sehil E; the data audit isolating the 186 conflicting urgency tickets across 67 duplicate groups; and the authentic Stage 5 reflection.
+* **Where AI Output Was Overridden or Corrected:** Replaced sigmoid calibration after finding a 30.5-point gap; enforced deterministic rule escalation for protected compliance/security intents; and audited raw duplicate tickets to correct urgency label noise from 254 to 186 tickets.
+* **Full Declaration:** The complete, detailed half-page declaration is published in **Appendix B** of the official Capstone Technical Report (`IkhlasPV_Capstone_Report.pdf`).
